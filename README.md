@@ -3,8 +3,6 @@
 
 [About Me](https://github.com/yihong0618/gitblog/issues/282)
 
-[RSS Feed](https://raw.githubusercontent.com/Jared-ZDC/markel/master/feed.xml) 
-
 
 ## 最近更新
 - [test9](https://github.com/Jared-ZDC/markel/issues/9)--2024-05-29
