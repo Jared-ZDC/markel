@@ -11,6 +11,7 @@ from marko.ext.gfm import gfm as marko
 
 MD_HEAD = """## [闲之君](https://github.com/Jared-ZDC/markel)
 **闲看云卷云舒，坐等花开花谢！**
+---
 闲之君 ： ([About Me](https://github.com/yihong0618/gitblog/issues/282)) 
 [RSS Feed](https://raw.githubusercontent.com/{repo_name}/master/feed.xml)
 """
