@@ -41,8 +41,8 @@ jobs:
 
       - name: Push README
         run: |
-          git config --local user.email "markel_zhu@126.com"
-          git config --local user.name "Markel"
+          git config --local user.email "zhu156208@126.com"
+          git config --local user.name "Jared-ZDC"
           git add BACKUP/*.md
           git commit -a -m 'update new blog' || echo "nothing to commit"
           git push || echo "nothing to push"
