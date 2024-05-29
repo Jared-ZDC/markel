@@ -45,6 +45,7 @@ jobs:
           gh release download $ZOLA_VERSION --repo getzola/zola -p '*linux*' --output zola.tar.gz
           tar zxf zola.tar.gz && mv zola /usr/local/bin
           cd output && zola build --base-url $BASE_URL
+          hexo --help
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
