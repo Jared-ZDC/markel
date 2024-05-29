@@ -293,6 +293,13 @@ def main(token, repo_name, issue_number=None, dir_name=BACKUP_DIR):
     generate_rss_feed(repo, "feed.xml", me)
     to_generate_issues = get_to_generate_issues(repo, dir_name, issue_number)
 
+    # del backup folder
+    dir_path=os.path.join(dir_name)
+    files=os.listdir(dir_path)
+    for filename in files:
+        file=os.path.join(dir_path, filename)
+        os.remove(file)
+    
     # save md files to backup folder
     for issue in to_generate_issues:
         save_issue(issue, me, dir_name)
