@@ -14,6 +14,7 @@ MD_HEAD = """## [闲之君](https://github.com/Jared-ZDC/markel)
 [About Me](https://github.com/yihong0618/gitblog/issues/282)\r\n
 """
 
+POST_DIR = "post"
 BACKUP_DIR = "BACKUP"
 ANCHOR_NUMBER = 5
 TOP_ISSUES_LABELS = ["Top"]
@@ -293,8 +294,8 @@ def main(token, repo_name, issue_number=None, dir_name=BACKUP_DIR):
     generate_rss_feed(repo, "feed.xml", me)
     to_generate_issues = get_to_generate_issues(repo, dir_name, issue_number)
 
-    # del backup folder
-    dir_path=os.path.join(dir_name)
+    # del post folder
+    dir_path=os.path.join(POST_DIR)
     files=os.listdir(dir_path)
     for filename in files:
         file=os.path.join(dir_path, filename)
@@ -303,6 +304,7 @@ def main(token, repo_name, issue_number=None, dir_name=BACKUP_DIR):
     # save md files to backup folder
     for issue in to_generate_issues:
         save_issue(issue, me, dir_name)
+        save_issue(issue, me, POST_DIR)
 
 
 def save_issue(issue, me, dir_name=BACKUP_DIR):
