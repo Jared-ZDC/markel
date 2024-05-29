@@ -1,7 +1,7 @@
 ## [闲之君](https://github.com/Jared-ZDC/markel)
 **闲看云卷云舒，坐等花开花谢！**
 
-[About Me](https://github.com/yihong0618/gitblog/issues/282)        [RSS Feed](https://raw.githubusercontent.com/Jared-ZDC/markel/master/feed.xml) 
+[About Me](https://github.com/yihong0618/gitblog/issues/282)		[RSS Feed](https://raw.githubusercontent.com/Jared-ZDC/markel/master/feed.xml) 
 
 
 ## 最近更新
