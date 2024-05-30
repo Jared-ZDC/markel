@@ -1,57 +1,50 @@
-name: Deploy static content to Pages
+name: Pages
 
 on:
-  issues:
-    types:
-      - opened
-      - edited
-      - closed
-      - reopened
-      - labeled
-      - unlabeled
-  workflow_dispatch:
-
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: ${{ github.workflow }}
-  cancel-in-progress: true
+  push:
+    branches:
+      - main  # default branch
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # If your repository depends on submodule, please see: https://github.com/actions/checkout
+          submodules: recursive
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          # Examples: 20, 18.19, >=16.20.2, lts/Iron, lts/Hydrogen, *, latest, current, node
+          # Ref: https://github.com/actions/setup-node#supported-version-syntax
+          node-version: '20'
+      - name: Cache NPM dependencies
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: ${{ runner.OS }}-npm-cache
+          restore-keys: |
+            ${{ runner.OS }}-npm-cache
+      - name: Install Dependencies
+        run: npm install
+      - name: Build
+        run: npm run build
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
   deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    env:
-      GH_TOKEN: ${{ github.token }}
-      ISITE_VERSION: v0.1.3
-      ZOLA_VERSION: v0.17.2
-      USER: ${{ github.repository_owner }}
-      REPO: ${{ github.event.repository.name }}
-      BASE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Generate markdown
-        run: |
-          gh release download $ISITE_VERSION --repo kemingy/isite -p '*Linux_x86_64*' --output isite.tar.gz
-          tar zxf isite.tar.gz && mv isite /usr/local/bin
-          isite generate --user $USER --repo $REPO
-          gh release download $ZOLA_VERSION --repo getzola/zola -p '*linux*' --output zola.tar.gz
-          tar zxf zola.tar.gz && mv zola /usr/local/bin
-          cd output && zola build --base-url $BASE_URL
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
-        with:
-          path: 'output/public'
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v3
+        uses: actions/deploy-pages@v4
