@@ -295,7 +295,8 @@ def main(token, repo_name, issue_number=None, dir_name=BACKUP_DIR):
     to_generate_issues = get_to_generate_issues(repo, dir_name, issue_number)
 
     to_generate_issues_post = get_to_generate_issues(repo, POST_DIR, issue_number)
-    
+    print(f"to_generate_issues = {to_generate_issues}")
+    print(f"to_generate_issues_post = {to_generate_issues_post}")
     # del post folder
     dir_path=os.path.join(POST_DIR)
     files=os.listdir(dir_path)
