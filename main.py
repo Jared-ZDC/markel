@@ -14,7 +14,7 @@ MD_HEAD = """## [闲之君](https://github.com/Jared-ZDC/markel)
 [About Me](https://github.com/yihong0618/gitblog/issues/282)\r\n
 """
 
-POST_DIR = "post"
+POST_DIR = "post" 
 BACKUP_DIR = "BACKUP"
 ANCHOR_NUMBER = 5
 TOP_ISSUES_LABELS = ["Top"]
