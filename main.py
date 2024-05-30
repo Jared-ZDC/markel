@@ -294,6 +294,8 @@ def main(token, repo_name, issue_number=None, dir_name=BACKUP_DIR):
     generate_rss_feed(repo, "feed.xml", me)
     to_generate_issues = get_to_generate_issues(repo, dir_name, issue_number)
 
+    to_generate_issues_post = get_to_generate_issues(repo, POST_DIR, issue_number)
+    
     # del post folder
     dir_path=os.path.join(POST_DIR)
     files=os.listdir(dir_path)
@@ -308,6 +310,7 @@ def main(token, repo_name, issue_number=None, dir_name=BACKUP_DIR):
     # save md files to backup folder
     for issue in to_generate_issues:
         save_issue(issue, me, dir_name)
+    for issue in to_generate_issues_post:
         save_issue(issue, me, POST_DIR)
 
 
