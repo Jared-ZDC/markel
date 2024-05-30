@@ -298,9 +298,9 @@ def main(token, repo_name, issue_number=None, dir_name=BACKUP_DIR):
     dir_path=os.path.join(POST_DIR)
     files=os.listdir(dir_path)
     for filename in files:
-        if filename == "readme"
+        if filename == "readme":
             continue
-        else
+        else:
             file=os.path.join(dir_path, filename)
             os.remove(file)
             print(f"remove file {file}")
