@@ -11,7 +11,7 @@ from lxml.etree import CDATA
 from marko.ext.gfm import gfm as marko
 
 MD_HEAD = """## [闲之君](https://github.com/Jared-ZDC/markel)
-**闲看云卷云舒，坐等花开花谢！**\r\n
+**闲看花开花落，静待云卷云舒！**\r\n
 [About Me](https://github.com/yihong0618/gitblog/issues/282)\r\n
 """
 
