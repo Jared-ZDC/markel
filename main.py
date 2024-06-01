@@ -294,29 +294,25 @@ def main(token, repo_name, issue_number=None, dir_name=BACKUP_DIR):
     generate_rss_feed(repo, "feed.xml", me)
     to_generate_issues = get_to_generate_issues(repo, dir_name, issue_number)
 
+    post_path=os.path.join(POST_DIR)
+    if not os.path.exists(post_path) :
+        os.makedirs(post_path)
+    files=os.listdir(post_path)
     to_generate_issues_post = get_to_generate_issues(repo, POST_DIR, issue_number)
     print(f"to_generate_issues = {to_generate_issues}")
     print(f"to_generate_issues_post = {to_generate_issues_post}")
     # del post folder
-    dir_path=os.path.join(POST_DIR)
-    files=os.listdir(dir_path)
+    
     for filename in files:
         if filename == "readme":
             continue
         else:
-            file=os.path.join(dir_path, filename)
+            file=os.path.join(post_path, filename)
             os.remove(file)
             print(f"remove file {file}")
 
-    if not os.path.exists(dir_path) :
-        os.makedirs(dir_path)
-    else:
-        file=os.path.join(dir_path, filename)
-        os.remove(file)
-        print(f"remove file {file}")
-
-    if not os.path.exists(dir_path) :
-        os.makedirs(dir_path)
+    if not os.path.exists(post_path) :
+        os.makedirs(post_path)
 
     # save md files to backup folder
     for issue in to_generate_issues:
