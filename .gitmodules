@@ -2,4 +2,7 @@
     path = themes/3-hexo
     url = https://github.com/yelog/hexo-theme-3-hexo.git
 
+[submodule "themes/cactus"]
+    path = themes/cactus
+    url = https://github.com/probberechts/hexo-theme-cactus.git
 
