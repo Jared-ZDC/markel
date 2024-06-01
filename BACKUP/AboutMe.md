@@ -1,8 +1,8 @@
 ---
 title: AboutMe
 date: 2024-05-29 12:07:59
-tags: [Label(name="About")]
----# [AboutMe](https://github.com/Jared-ZDC/markel/issues/10)
+---
+# [AboutMe](https://github.com/Jared-ZDC/markel/issues/10)
 
 # 闲之君
 
