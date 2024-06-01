@@ -341,7 +341,7 @@ def main(token, repo_name, issue_number=None, dir_name=BACKUP_DIR):
     for issue in to_generate_issues_post:
         save_issue(issue, me, POST_DIR)
 
-    os.remove("source/_posts")
+    shutil.rmtree("source/_posts")
     copy_dir_contents(POST_DIR,"source/_posts/")
 
 
