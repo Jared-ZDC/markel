@@ -1,6 +1,11 @@
 name: Pages
 
 on:
+  workflow_dispatch:
+  issues:
+    types: [opened, edited]
+  issue_comment:
+    types: [created, edited]
   push:
     branches:
       - main  # default branch
@@ -27,8 +32,28 @@ jobs:
           key: ${{ runner.OS }}-npm-cache
           restore-keys: |
             ${{ runner.OS }}-npm-cache
+            
       - name: Install Dependencies
-        run: npm install
+        run: |
+            npm install
+            python -m pip install --upgrade pip
+            python -m venv venv
+            source venv/bin/activate
+            pip install -r requirements.txt
+            
+      - name: Generate new md
+        run: |
+          source venv/bin/activate
+          python main.py ${{ secrets.G_T }} ${{ github.repository }} --issue_number '${{ github.event.issue.number }}'
+          
+      - name: Push README
+        run: |
+          git config --local user.email "zhu156208@126.com"
+          git config --local user.name "Jared-ZDC"
+          git add  BACKUP/*.md post/*.md source/_posts/*.md
+          git commit -a -m 'update new blog' || echo "nothing to commit"
+          git push || echo "nothing to push"
+          
       - name: Build
         run: npm run build
       - name: Upload Pages artifact
