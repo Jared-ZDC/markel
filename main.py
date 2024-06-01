@@ -2,6 +2,7 @@
 import argparse
 import os
 import re
+import shutil
 
 import markdown
 from feedgen.feed import FeedGenerator
