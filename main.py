@@ -14,7 +14,7 @@ MD_HEAD = """## [闲之君](https://github.com/Jared-ZDC/markel)
 [About Me](https://github.com/yihong0618/gitblog/issues/282)\r\n
 """
 
-POST_DIR = "source/_posts/" 
+POST_DIR = "post" 
 BACKUP_DIR = "BACKUP"
 ANCHOR_NUMBER = 5
 TOP_ISSUES_LABELS = ["Top"]
@@ -281,7 +281,27 @@ def generate_rss_feed(repo, filename, me):
         item.content(CDATA(marko.convert(body)), type="html")
     generator.atom_file(filename)
 
-
+def copy_dir_contents(src, dst):
+    """
+    将源目录src内的所有文件拷贝到目标目录dst中。
+    如果dst已存在，则直接拷贝文件，不重新创建dst。
+    """
+    if not os.path.exists(dst):
+        # 目标目录不存在，直接拷贝整个目录
+        shutil.copytree(src, dst, dirs_exist_ok=True)  # dirs_exist_ok=True 允许目标目录存在
+    else:
+        # 目标目录存在，遍历源目录下的文件和子目录
+        for item in os.listdir(src):
+            src_item = os.path.join(src, item)
+            dst_item = os.path.join(dst, item)
+            
+            if os.path.isdir(src_item):
+                # 如果是子目录，则递归拷贝
+                copy_dir_contents(src_item, dst_item)
+            else:
+                # 如果是文件，则直接拷贝文件
+                shutil.copy2(src_item, dst_item)  # shutil.copy2() 用于拷贝文件并保留元数据
+                
 def main(token, repo_name, issue_number=None, dir_name=BACKUP_DIR):
     user = login(token)
     me = get_me(user)
@@ -294,10 +314,10 @@ def main(token, repo_name, issue_number=None, dir_name=BACKUP_DIR):
     generate_rss_feed(repo, "feed.xml", me)
     to_generate_issues = get_to_generate_issues(repo, dir_name, issue_number)
 
-    post_path=os.path.join(POST_DIR)
-    if not os.path.exists(post_path) :
-        os.makedirs(post_path)
-    files=os.listdir(post_path)
+    if not os.path.exists(POST_DIR) :
+        os.makedirs(POST_DIR)
+        print(os.path.abspath(POST_DIR))
+    files=os.listdir(POST_DIR)
     to_generate_issues_post = get_to_generate_issues(repo, POST_DIR, issue_number)
     print(f"to_generate_issues = {to_generate_issues}")
     print(f"to_generate_issues_post = {to_generate_issues_post}")
@@ -307,18 +327,20 @@ def main(token, repo_name, issue_number=None, dir_name=BACKUP_DIR):
         if filename == "readme":
             continue
         else:
-            file=os.path.join(post_path, filename)
+            file=os.path.join(POST_DIR, filename)
             os.remove(file)
             print(f"remove file {file}")
 
-    if not os.path.exists(post_path) :
-        os.makedirs(post_path)
+    if not os.path.exists(POST_DIR) :
+        os.makedirs(POST_DIR)
 
     # save md files to backup folder
     for issue in to_generate_issues:
         save_issue(issue, me, dir_name)
     for issue in to_generate_issues_post:
         save_issue(issue, me, POST_DIR)
+
+    copy_dir_contents(POST_DIR,"source/_posts/")
 
 
 def save_issue(issue, me, dir_name=BACKUP_DIR):
