@@ -34,7 +34,9 @@ jobs:
             ${{ runner.OS }}-npm-cache
             
       - name: Install Dependencies
-        run: npm install
+        run: |
+            
+            npm install
             python -m pip install --upgrade pip
             python -m venv venv
             source venv/bin/activate
