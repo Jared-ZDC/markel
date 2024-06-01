@@ -350,6 +350,11 @@ def save_issue(issue, me, dir_name=BACKUP_DIR):
         dir_name, f"{issue.title.replace('/', '-').replace(' ', '.')}.md"
     )
     with open(md_name, "w") as f:
+        f.write(f"---\n")
+        f.write(f"title: {issue.title}\n")
+        f.write(f"{issue} \n")
+        f.write(f"---\n")
+        
         f.write(f"# [{issue.title}]({issue.html_url})\n\n")
         f.write(issue.body or "")
         if issue.comments:
