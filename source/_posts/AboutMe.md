@@ -2,8 +2,6 @@
 title: AboutMe
 date: 2024-05-29 12:07:59
 ---
-# [AboutMe](https://github.com/Jared-ZDC/markel/issues/10)
-
 # 闲之君
 
 座右铭 ： **闲看云卷云舒，坐等花开花谢~**
