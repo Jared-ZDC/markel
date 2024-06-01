@@ -307,7 +307,17 @@ def main(token, repo_name, issue_number=None, dir_name=BACKUP_DIR):
             file=os.path.join(dir_path, filename)
             os.remove(file)
             print(f"remove file {file}")
-    
+
+    if not os.path.exists(dir_path) :
+        os.makedirs(dir_path)
+    else:
+        file=os.path.join(dir_path, filename)
+        os.remove(file)
+        print(f"remove file {file}")
+
+    if not os.path.exists(dir_path) :
+        os.makedirs(dir_path)
+
     # save md files to backup folder
     for issue in to_generate_issues:
         save_issue(issue, me, dir_name)
