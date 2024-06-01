@@ -1,8 +1,0 @@
-[submodule "themes/3-hexo"]
-    path = themes/3-hexo
-    url = https://github.com/yelog/hexo-theme-3-hexo.git
-
-[submodule "themes/cactus"]
-    path = themes/cactus
-    url = https://github.com/Jared-ZDC/hexo-theme-cactus.git
-
