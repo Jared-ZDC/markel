@@ -1,5 +1,50 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/Jared-ZDC/markel</id><title>RSS feed of Jared-ZDC's markel</title><updated>2024-06-01T13:34:16.934797+00:00</updated><link href="https://github.com/Jared-ZDC/markel"/><link href="https://raw.githubusercontent.com/Jared-ZDC/markel/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/Jared-ZDC/markel/issues/10</id><title>AboutMe</title><updated>2024-06-01T13:34:17.200607+00:00</updated><content type="html"><![CDATA[<h1>闲之君</h1>
+<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/Jared-ZDC/markel</id><title>RSS feed of Jared-ZDC's markel</title><updated>2024-06-03T08:07:13.662156+00:00</updated><link href="https://github.com/Jared-ZDC/markel"/><link href="https://raw.githubusercontent.com/Jared-ZDC/markel/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/Jared-ZDC/markel/issues/14</id><title>交叉编译Openblas库</title><updated>2024-06-03T08:07:13.897263+00:00</updated><content type="html"><![CDATA[<h1>下载源码</h1>
+<pre><code class="language-bash">git clone https://github.com/OpenMathLib/OpenBLAS.git
+</code></pre>
+<h1>编译</h1>
+<pre><code class="language-bash">gmake TARGET=ARMV8 BINARY=64 HOSTCC=gcc CC=aarch64-linux-gnu-gcc FC=aarch64-linux-gnu-gfortran
+
+#可以查看Targetlist.txt看支持哪些目标平台
+</code></pre>
+<h2>注意</h2>
+<p><img src="https://github.com/Jared-ZDC/markel/assets/17999499/bca51fc3-2640-463d-8cf8-2d5387540244" alt="image" />
+出现这种错误，是因为可能存在windows跟unix的脚本转换错误，这里使用dos2unix将系统目录整体处理一边</p>
+<pre><code class="language-bash">dos2unix ./*
+dos2unix exports/gensymbol
+</code></pre>
+<h1>编译完成</h1>
+<pre><code class="language-bash"> OpenBLAS build complete. (BLAS CBLAS LAPACK LAPACKE)
+
+  OS               ... Linux
+  Architecture     ... arm64
+  BINARY           ... 64bit
+  C compiler       ... GCC  (cmd &amp; version : aarch64-linux-gnu-gcc (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0)
+  Fortran compiler ... GFORTRAN  (cmd &amp; version : GNU Fortran (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0)
+  Library Name     ... libopenblas_armv8p-r0.3.27.dev.a (Multi-threading; Max num-threads is 20)
+
+To install the library, you can run &quot;make PREFIX=/path/to/your/installation install&quot;.
+</code></pre>
+<h1>编译benchmark</h1>
+<pre><code class="language-bash">cd benchmark
+gmake TARGET=ARMV8 BINARY=64 HOSTCC=gcc CC=aarch64-linux-gnu-gcc FC=aarch64-linux-gnu-gfortran
+</code></pre>
+<h1>测试</h1>
+<pre><code class="language-bash">
+#设置循环次数
+export OPENBLAS_LOOPS=10000000
+export OPENBLAS_PARAM_M=200
+export OPENBLAS_PARAM_N=200
+export OPENBLAS_PARAM_K=200
+
+#设置线程数量，对于某些测试，不一定生效
+export OPENBLAS_NUM_THREADS=4
+
+#测试
+./sgemm.goto 
+
+</code></pre>
+]]></content><link href="https://github.com/Jared-ZDC/markel/issues/14"/><published>2024-06-03T08:06:28+00:00</published></entry><entry><id>https://github.com/Jared-ZDC/markel/issues/10</id><title>AboutMe</title><updated>2024-06-03T08:07:14.011943+00:00</updated><content type="html"><![CDATA[<h1>闲之君</h1>
 <p>座右铭 ： <strong>闲看云卷云舒，坐等花开花谢~</strong></p>
 <p>爱好： 三分钟热度</p>
 <p>编年史 : </p>

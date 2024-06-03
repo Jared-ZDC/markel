@@ -5,4 +5,5 @@
 
 
 ## 最近更新
+- [交叉编译Openblas库](https://github.com/Jared-ZDC/markel/issues/14)--2024-06-03
 - [AboutMe](https://github.com/Jared-ZDC/markel/issues/10)--2024-05-29
