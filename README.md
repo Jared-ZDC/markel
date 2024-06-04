@@ -5,5 +5,9 @@
 
 
 ## 最近更新
+- [Qemu Virt平台集成ARM PL080 DMA](https://github.com/Jared-ZDC/markel/issues/15)--2024-06-04
 - [交叉编译Openblas库](https://github.com/Jared-ZDC/markel/issues/14)--2024-06-03
 - [AboutMe](https://github.com/Jared-ZDC/markel/issues/10)--2024-05-29
+## 笔记
+- [Qemu Virt平台集成ARM PL080 DMA](https://github.com/Jared-ZDC/markel/issues/15)--2024-06-04
+- [交叉编译Openblas库](https://github.com/Jared-ZDC/markel/issues/14)--2024-06-03

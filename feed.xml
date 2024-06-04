@@ -1,5 +1,16 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/Jared-ZDC/markel</id><title>RSS feed of Jared-ZDC's markel</title><updated>2024-06-03T08:07:13.662156+00:00</updated><link href="https://github.com/Jared-ZDC/markel"/><link href="https://raw.githubusercontent.com/Jared-ZDC/markel/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/Jared-ZDC/markel/issues/14</id><title>交叉编译Openblas库</title><updated>2024-06-03T08:07:13.897263+00:00</updated><content type="html"><![CDATA[<h1>下载源码</h1>
+<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/Jared-ZDC/markel</id><title>RSS feed of Jared-ZDC's markel</title><updated>2024-06-04T05:35:10.342074+00:00</updated><link href="https://github.com/Jared-ZDC/markel"/><link href="https://raw.githubusercontent.com/Jared-ZDC/markel/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/Jared-ZDC/markel/issues/15</id><title>Qemu Virt平台集成ARM PL080 DMA</title><updated>2024-06-04T05:35:10.562321+00:00</updated><content type="html"><![CDATA[<p>[TOC]</p>
+<h1>背景</h1>
+<p>最近有比较多的新员工入职，新员工入职如何更快的适应工作，需要通过一些虚拟项目进行工作培训；但是如果利用现有的芯片平台进行验证，有几个缺陷：</p>
+<ul>
+<li>当前芯片略显复杂，新员工接手理解难度较高</li>
+<li>平台已经solid，并且有参考的代码以及测试用例，对于新员工而言，没有起到端到端cover一个模块的作用</li>
+<li>难以预埋bug，无法通过挖掘设计bug，衡量验证效果</li>
+</ul>
+<p>基于以上问题</p>
+<h1>集成PL080 DMA</h1>
+<h1>测试</h1>
+]]></content><link href="https://github.com/Jared-ZDC/markel/issues/15"/><category term="笔记"/><published>2024-06-04T05:34:28+00:00</published></entry><entry><id>https://github.com/Jared-ZDC/markel/issues/14</id><title>交叉编译Openblas库</title><updated>2024-06-04T05:35:10.672715+00:00</updated><content type="html"><![CDATA[<h1>下载源码</h1>
 <pre><code class="language-bash">git clone https://github.com/OpenMathLib/OpenBLAS.git
 </code></pre>
 <h1>编译</h1>
@@ -44,7 +55,7 @@ export OPENBLAS_NUM_THREADS=4
 ./sgemm.goto 
 
 </code></pre>
-]]></content><link href="https://github.com/Jared-ZDC/markel/issues/14"/><published>2024-06-03T08:06:28+00:00</published></entry><entry><id>https://github.com/Jared-ZDC/markel/issues/10</id><title>AboutMe</title><updated>2024-06-03T08:07:14.011943+00:00</updated><content type="html"><![CDATA[<h1>闲之君</h1>
+]]></content><link href="https://github.com/Jared-ZDC/markel/issues/14"/><category term="笔记"/><published>2024-06-03T08:06:28+00:00</published></entry><entry><id>https://github.com/Jared-ZDC/markel/issues/10</id><title>AboutMe</title><updated>2024-06-04T05:35:10.768162+00:00</updated><content type="html"><![CDATA[<h1>闲之君</h1>
 <p>座右铭 ： <strong>闲看云卷云舒，坐等花开花谢~</strong></p>
 <p>爱好： 三分钟热度</p>
 <p>编年史 : </p>
