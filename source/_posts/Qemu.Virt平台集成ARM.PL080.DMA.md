@@ -124,10 +124,19 @@ static void create_dma(const VirtMachineState *vms)
 ```patch
 //dma集成读写测试用
 diff --git a/qemu/qemu-8.1.4/hw/dma/pl080.c b/qemu/qemu-8.1.4/hw/dma/pl080.c
-index a03dcf428..2d5a0294f 100644
+index a03dcf428..9ff191a02 100644
 --- a/qemu/qemu-8.1.4/hw/dma/pl080.c
 +++ b/qemu/qemu-8.1.4/hw/dma/pl080.c
-@@ -275,6 +275,8 @@ static uint64_t pl080_read(void *opaque, hwaddr offset,
+@@ -221,6 +221,8 @@ static uint64_t pl080_read(void *opaque, hwaddr offset,
+     uint32_t i;
+     uint32_t mask;
+
++    qemu_log_mask(LOG_GUEST_ERROR,"pl080_read %x, %d,  size %x\n", offset, offset >> 2, size);
++
+     if (offset >= 0xfe0 && offset < 0x1000) {
+         if (s->nchannels == 8) {
+             return pl080_id[(offset - 0xfe0) >> 2];
+@@ -275,6 +277,8 @@ static uint64_t pl080_read(void *opaque, hwaddr offset,
          return s->conf;
      case 13: /* Sync */
          return s->sync;
@@ -136,7 +145,15 @@ index a03dcf428..2d5a0294f 100644
      default:
      bad_offset:
          qemu_log_mask(LOG_GUEST_ERROR,
-@@ -338,6 +340,8 @@ static void pl080_write(void *opaque, hwaddr offset,
+@@ -289,6 +293,7 @@ static void pl080_write(void *opaque, hwaddr offset,
+     PL080State *s = (PL080State *)opaque;
+     int i;
+
++    qemu_log_mask(LOG_GUEST_ERROR,"pl080_write %x, size %x, value %x\n", offset, size, value);
+     if (offset >= 0x100 && offset < 0x200) {
+         i = (offset & 0xe0) >> 5;
+         if (i >= s->nchannels)
+@@ -338,6 +343,8 @@ static void pl080_write(void *opaque, hwaddr offset,
      case 13: /* Sync */
          s->sync = value;
          break;
@@ -145,6 +162,15 @@ index a03dcf428..2d5a0294f 100644
      default:
      bad_offset:
          qemu_log_mask(LOG_GUEST_ERROR,
+@@ -366,7 +373,7 @@ static void pl080_reset(DeviceState *dev)
+     s->req_single = 0;
+     s->req_burst = 0;
+     s->running = 0;
+-
++    s->magic_words = 0x55aa55aa;
+     for (i = 0; i < s->nchannels; i++) {
+         s->chan[i].src = 0;
+         s->chan[i].dest = 0;
 ```
 
 ## 编译
@@ -165,5 +191,15 @@ build/qemu-system-aarch64 \
 ### dump dma寄存器
 通过dump dma的寄存器，简单看一下dma寄存器是否按照预期集成完成
 ```bash
+[root:DMA: ~]# devmem 0x9012040
+0x55AA55AA
+[root:DMA: ~]# devmem 0x9012040 32 0xaa55aa55
+[root:DMA: ~]# devmem 0x9012040
+0xAA55AA55
+```
+寄存器读写功能正常
 
+### dma搬运测试
+#### dma测试驱动
+简单写一个dma测试代码，搬运两个地址的数据，并进行搬运后数据检查，看看中断是否正常上报
 ```
