@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/Jared-ZDC/markel</id><title>RSS feed of Jared-ZDC's markel</title><updated>2024-06-11T03:43:25.153627+00:00</updated><link href="https://github.com/Jared-ZDC/markel"/><link href="https://raw.githubusercontent.com/Jared-ZDC/markel/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/Jared-ZDC/markel/issues/16</id><title>聊一聊职业机会</title><updated>2024-06-11T03:43:25.474004+00:00</updated><content type="html"><![CDATA[<p>挺有意思的一件事，最近公司在做组织结构调整，有基层领导岗位的竞聘机会，于是给到自己团队内的核心骨干提示，希望相关骨干能够有勇气，有能力去竞聘一下，本以为会有比较多的同学尝试一下，但是实际的结果却出乎我的意料，最终竞聘的时候，没有一个同学敢于尝试；这里就引申了一个话题，作为研发人员，在职场的机会是什么？</p>
+<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/Jared-ZDC/markel</id><title>RSS feed of Jared-ZDC's markel</title><updated>2024-06-21T08:34:55.775909+00:00</updated><link href="https://github.com/Jared-ZDC/markel"/><link href="https://raw.githubusercontent.com/Jared-ZDC/markel/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/Jared-ZDC/markel/issues/16</id><title>聊一聊职业机会</title><updated>2024-06-21T08:34:56.071839+00:00</updated><content type="html"><![CDATA[<p>挺有意思的一件事，最近公司在做组织结构调整，有基层领导岗位的竞聘机会，于是给到自己团队内的核心骨干提示，希望相关骨干能够有勇气，有能力去竞聘一下，本以为会有比较多的同学尝试一下，但是实际的结果却出乎我的意料，最终竞聘的时候，没有一个同学敢于尝试；这里就引申了一个话题，作为研发人员，在职场的机会是什么？</p>
 <h1>研发人员的职场发展</h1>
 <p>我在研发行业也算从业了10多年了，从一个基层研发到10来人的小团队leader到现在，其实看到过很多人包括自己在工作中经常会有的思考：</p>
 <ul>
@@ -9,18 +9,164 @@
 <li>要不要跳槽，换个公司</li>
 </ul>
 <p>在自己的职业发展过程中，一方面确实吃到了时代的红利，另外一方面也是</p>
-]]></content><link href="https://github.com/Jared-ZDC/markel/issues/16"/><category term="生活感悟"/><published>2024-06-04T05:54:14+00:00</published></entry><entry><id>https://github.com/Jared-ZDC/markel/issues/15</id><title>Qemu Virt平台集成ARM PL080 DMA</title><updated>2024-06-11T03:43:25.623616+00:00</updated><content type="html"><![CDATA[<p>[TOC]</p>
-<h1>背景</h1>
+]]></content><link href="https://github.com/Jared-ZDC/markel/issues/16"/><category term="生活感悟"/><published>2024-06-04T05:54:14+00:00</published></entry><entry><id>https://github.com/Jared-ZDC/markel/issues/15</id><title>Qemu Virt平台集成ARM PL080 DMA</title><updated>2024-06-21T08:34:56.189365+00:00</updated><content type="html"><![CDATA[<h1>背景</h1>
 <p>最近有比较多的新员工入职，新员工入职如何更快的适应工作，需要通过一些虚拟项目进行工作培训；但是如果利用现有的芯片平台进行验证，有几个缺陷：</p>
 <ul>
 <li>当前芯片略显复杂，新员工接手理解难度较高</li>
 <li>平台已经solid，并且有参考的代码以及测试用例，对于新员工而言，没有起到端到端cover一个模块的作用</li>
 <li>难以预埋bug，无法通过挖掘设计bug，衡量验证效果</li>
 </ul>
-<p>基于以上问题</p>
-<h1>集成PL080 DMA</h1>
-<h1>测试</h1>
-]]></content><link href="https://github.com/Jared-ZDC/markel/issues/15"/><category term="笔记"/><published>2024-06-04T05:34:28+00:00</published></entry><entry><id>https://github.com/Jared-ZDC/markel/issues/14</id><title>交叉编译Openblas库</title><updated>2024-06-11T03:43:25.753805+00:00</updated><content type="html"><![CDATA[<h1>下载源码</h1>
+<p>因此根据实际工作需求，设计了一个可以给到新员工练兵的验证项目，利用qemu平台，集成一个简单的DMA模块，并且在模块中预埋一些bug，让新员工提前感知在后续验证过程中，应该要重点关注的一些验证重点，验证难点，同时也可以观察在整个新员工项目过程中，新员工的表现，识别高潜人才；</p>
+<h1>验证平台开发</h1>
+<h2>集成开发环境</h2>
+<p>Qemu针对arm类的处理器，提供了一个单纯的开发环境，Virt平台，如下是virt平台的一些简述：</p>
+<blockquote>
+<p><a href="https://www.qemu.org/docs/master/system/riscv/virt.html#virt-generic-virtual-platform-virt">‘virt’ Generic Virtual Platform</a>
+The virt board is a platform which does not correspond to any real hardware; it is designed for use in virtual machines. It is the recommended board type if you simply want to run a guest such as Linux and do not care about reproducing the idiosyncrasies and limitations of a particular bit of real-world hardware.
+<a href="https://www.qemu.org/docs/master/system/riscv/virt.html#supported-devices">Supported devices</a>
+The virt machine supports the following devices:</p>
+<ul>
+<li>Up to 512 generic RV32GC/RV64GC cores, with optional extensions</li>
+<li>Core Local Interruptor (CLINT)</li>
+<li>Platform-Level Interrupt Controller (PLIC)
+*CFI parallel NOR flash memory</li>
+<li>1 NS16550 compatible UART</li>
+<li>1 Google Goldfish RTC</li>
+<li>1 SiFive Test device</li>
+<li>8 virtio-mmio transport devices</li>
+<li>1 generic PCIe host bridge</li>
+<li>The fw_cfg device that allows a guest to obtain data from QEMU
+The hypervisor extension has been enabled for the default CPU, so virtual machines with hypervisor extension can simply be used without explicitly declaring.</li>
+</ul>
+</blockquote>
+<p>所以在Virt平台中，简单集成一下virtio-mmio设备即可；</p>
+<p>于此同时，对于验证新手项目而言，DMA设备是一个能够比较小巧又比较全面的设备，因此可以选择一个相对简单的DMA集成到环境中即可；</p>
+<h2>DMA选型</h2>
+<p>在原生qemu 代码中，提供了如下几款DMA设备：</p>
+<ul>
+<li>bcm2835_dma</li>
+<li>omap_dma</li>
+<li>arm pl080 dma</li>
+<li>arm pl330 dma</li>
+<li>xlnx的3款dma</li>
+<li>...
+<img src="https://github.com/Jared-ZDC/markel/assets/17999499/8631ad56-50c5-4a4d-b657-699aaee31024" alt="qemu dma" /></li>
+</ul>
+<p>从选择的几个dma spec内容看起来，arm的pl080 dma相对简单，并且有完善的spec资料以及开源支持的驱动代码，因此在选型上个人更偏向arm PL080 DMA设备；</p>
+<h2>集成DMA</h2>
+<p>qemu virt集成的方式比较简单，首先看一下pl080的设备描述：</p>
+<pre><code class="language-c">static Property pl080_properties[] = {
+    DEFINE_PROP_LINK(&quot;downstream&quot;, PL080State, downstream,
+                     TYPE_MEMORY_REGION, MemoryRegion *),
+    DEFINE_PROP_END_OF_LIST(),
+};
+</code></pre>
+<p>PL080的属性只有一个downstream， 类型是memory region类型，表示dma 链接系统memory的区域， 因此在qemu virt平台中集成只要对downstream进行处理即可：</p>
+<pre><code class="language-c">//virt.c
+static const MemMapEntry base_memmap[] = {
+    /* Space up to 0x8000000 is reserved for a boot ROM */
+    [VIRT_FLASH] =              {          0, 0x08000000 },
+...
+    [VIRT_DMA] =                { 0x09011000, 0x00001000 },
+...
+    [VIRT_MEM] =                { GiB, LEGACY_RAMLIMIT_BYTES },
+};
+
+static const int a15irqmap[] = {
+    [VIRT_UART] = 1,
+    [VIRT_RTC] = 2,
+...
+    [VIRT_PLATFORM_BUS] = 112, /* ...to 112 + PLATFORM_BUS_NUM_IRQS -1 */
+    [VIRT_DMA] = 212,
+};
+static void create_dma(const VirtMachineState *vms)
+{
+    int i;
+    char *nodename;
+    hwaddr base = vms-&gt;memmap[VIRT_PDMA].base;
+    hwaddr size = vms-&gt;memmap[VIRT_PDMA].size;
+    int irq = vms-&gt;irqmap[VIRT_PDMA];
+    const char compat[] = &quot;arm,pl080\0arm,primecell&quot;;
+    const char irq_names[] = &quot;intr\0interr\0inttc&quot;;
+    DeviceState *dev;
+    MachineState *ms = MACHINE(vms);
+    SysBusDevice *busdev;
+
+    dev = qdev_new(&quot;pl080&quot;);
+
+    object_property_set_link(OBJECT(dev), &quot;downstream&quot;, OBJECT(get_system_memory()), &amp;error_fatal);
+
+    busdev = SYS_BUS_DEVICE(dev);
+    sysbus_realize_and_unref(busdev, &amp;error_fatal);
+    sysbus_mmio_map(busdev, 0, base);
+
+    for (i = 0; i &lt; 3; ++i) {
+        sysbus_connect_irq(busdev, i, qdev_get_gpio_in(vms-&gt;gic, irq + i));
+    }
+
+    nodename = g_strdup_printf(&quot;/pl080@%&quot; PRIx64, base);
+    qemu_fdt_add_subnode(ms-&gt;fdt, nodename);
+    qemu_fdt_setprop(ms-&gt;fdt, nodename, &quot;compatible&quot;, compat, sizeof(compat));
+    qemu_fdt_setprop_sized_cells(ms-&gt;fdt, nodename, &quot;reg&quot;,
+                                 2, base, 2, size);
+    qemu_fdt_setprop_cells(ms-&gt;fdt, nodename, &quot;interrupts&quot;,
+                    GIC_FDT_IRQ_TYPE_SPI, irq, GIC_FDT_IRQ_FLAGS_LEVEL_HI,
+                    GIC_FDT_IRQ_TYPE_SPI, irq + 1, GIC_FDT_IRQ_FLAGS_LEVEL_HI,
+                    GIC_FDT_IRQ_TYPE_SPI, irq + 2, GIC_FDT_IRQ_FLAGS_LEVEL_HI);
+
+    qemu_fdt_setprop(ms-&gt;fdt, nodename, &quot;interrupt-names&quot;, irq_names,
+                     sizeof(irq_names));
+
+    qemu_fdt_setprop_cell(ms-&gt;fdt, nodename, &quot;clocks&quot;, vms-&gt;clock_phandle);
+    qemu_fdt_setprop_string(ms-&gt;fdt, nodename, &quot;clock-names&quot;, &quot;apb_pclk&quot;);
+
+    g_free(nodename);
+}
+
+</code></pre>
+<p>为了验证集成dma的寄存器访问正确性， 单独将0x64寄存器设置为魔术字寄存器，可读，可写</p>
+<pre><code class="language-patch">//dma集成读写测试用
+diff --git a/qemu/qemu-8.1.4/hw/dma/pl080.c b/qemu/qemu-8.1.4/hw/dma/pl080.c
+index a03dcf428..2d5a0294f 100644
+--- a/qemu/qemu-8.1.4/hw/dma/pl080.c
++++ b/qemu/qemu-8.1.4/hw/dma/pl080.c
+@@ -275,6 +275,8 @@ static uint64_t pl080_read(void *opaque, hwaddr offset,
+         return s-&gt;conf;
+     case 13: /* Sync */
+         return s-&gt;sync;
++    case 16: /*magic word*/
++       return s-&gt;magic_words;
+     default:
+     bad_offset:
+         qemu_log_mask(LOG_GUEST_ERROR,
+@@ -338,6 +340,8 @@ static void pl080_write(void *opaque, hwaddr offset,
+     case 13: /* Sync */
+         s-&gt;sync = value;
+         break;
++    case 16: /*magic word*/
++       s-&gt;magic_words = value;
+     default:
+     bad_offset:
+         qemu_log_mask(LOG_GUEST_ERROR,
+</code></pre>
+<h2>编译</h2>
+<p>将qemu编译完成后，使用如下命令启动系统：</p>
+<pre><code class="language-bash">build/qemu-system-aarch64 \
+    -nographic \
+    -M virt,virtualization=true,gic-version=3 \
+    -cpu cortex-a76 \
+    -smp 4 \
+    -m 8G \
+    -kernel ../../linux/linux-6.6/arch/arm64/boot/Image \
+    -append &quot;rootfstype=ramfs rdinit=/linuxrc console=ttyAMA0&quot; \
+    -initrd ../../busybox/busybox-1.36.1/initrd.cpio.gz
+</code></pre>
+<h2>测试</h2>
+<h3>dump dma寄存器</h3>
+<p>通过dump dma的寄存器，简单看一下dma寄存器是否按照预期集成完成</p>
+<pre><code class="language-bash">
+</code></pre>
+]]></content><link href="https://github.com/Jared-ZDC/markel/issues/15"/><category term="笔记"/><published>2024-06-04T05:34:28+00:00</published></entry><entry><id>https://github.com/Jared-ZDC/markel/issues/14</id><title>交叉编译Openblas库</title><updated>2024-06-21T08:34:56.376892+00:00</updated><content type="html"><![CDATA[<h1>下载源码</h1>
 <pre><code class="language-bash">git clone https://github.com/OpenMathLib/OpenBLAS.git
 </code></pre>
 <h1>编译</h1>
@@ -65,7 +211,7 @@ export OPENBLAS_NUM_THREADS=4
 ./sgemm.goto 
 
 </code></pre>
-]]></content><link href="https://github.com/Jared-ZDC/markel/issues/14"/><category term="笔记"/><published>2024-06-03T08:06:28+00:00</published></entry><entry><id>https://github.com/Jared-ZDC/markel/issues/10</id><title>AboutMe</title><updated>2024-06-11T03:43:25.915959+00:00</updated><content type="html"><![CDATA[<h1>闲之君</h1>
+]]></content><link href="https://github.com/Jared-ZDC/markel/issues/14"/><category term="笔记"/><published>2024-06-03T08:06:28+00:00</published></entry><entry><id>https://github.com/Jared-ZDC/markel/issues/10</id><title>AboutMe</title><updated>2024-06-21T08:34:56.535420+00:00</updated><content type="html"><![CDATA[<h1>闲之君</h1>
 <p>座右铭 ： <strong>闲看云卷云舒，坐等花开花谢~</strong></p>
 <p>爱好： 三分钟热度</p>
 <p>编年史 : </p>
