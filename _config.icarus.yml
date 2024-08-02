@@ -3,16 +3,16 @@ version: 5.1.0
 # Icarus theme variant, can be "default" or "cyberpunk"
 variant: default
 # Path or URL to the website's logo
-logo: /img/logo.svg
+logo: /img/logo.png
 # Page metadata configurations
 head:
     # URL or path to the website's icon
-    favicon: /img/favicon.svg
+    favicon: /img/logo.png
     # Web application manifests configuration
     # https://developer.mozilla.org/en-US/docs/Web/Manifest
     manifest:
         # Name of the web application (default to the site title)
-        name: 
+        name: 自言堂
         # The displayed name of the web application
         # when there is not enough space to display full name
         short_name: 
@@ -229,13 +229,13 @@ widgets:
         position: left
         type: profile
         # Author name
-        author: Your name
+        author: Markel
         # Author title
-        author_title: Your title
+        author_title: 专业忽悠学者
         # Author's current location
-        location: Your location
+        location: 中国.湖南.长沙
         # URL or path to the avatar image
-        avatar: 
+        avatar: /img/touxiang.png
         # Whether show the rounded avatar image
         avatar_rounded: false
         # Email address for the Gravatar
