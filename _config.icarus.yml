@@ -237,7 +237,7 @@ widgets:
         # Author's current location
         location: 中国.湖南.长沙
         # URL or path to the avatar image
-        avatar: https://picx.zhimg.com/v2-75c9baa967fc9ff1ab3dc77ca63cf35a_xll.jpg?source=32738c0c
+        avatar: https://github.com/user-attachments/assets/86a40ac0-914e-4a5e-8d82-e7c1e8291adc
         # Whether show the rounded avatar image
         avatar_rounded: false
         # Email address for the Gravatar
