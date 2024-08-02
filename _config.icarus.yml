@@ -189,12 +189,12 @@ comment:
     categoryId: DIC_kwDOMCHPEM4ChWwd # 必填项
     mapping: pathname                # 可选填，默认为 pathname
     strict: false                    # 可选填
-    reactionsEnabled: false          # 可选填
+    reactionsEnabled: true          # 可选填
     emitMetadata: false              # 可选填
     inputPosition: top               # 可选填，默认为 top
     theme: noborder_light            # 可选填
     lang: zh-CN                      # 可选填，默认为 en
-    lazy: true                       # 可选填，默认为 false
+    lazy: false                       # 可选填，默认为 false
 
 # Donate plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
