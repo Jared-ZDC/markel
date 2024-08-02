@@ -107,7 +107,7 @@ navbar:
     menu:
         首页: /
         归档: /archives
-        #分类: /categories
+        类别: /categories
         标签: /tags
         关于: /about
         留言板: /liuyanban
