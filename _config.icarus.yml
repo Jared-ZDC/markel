@@ -239,7 +239,7 @@ widgets:
         # Whether show the rounded avatar image
         avatar_rounded: false
         # Email address for the Gravatar
-        gravatar: 
+        gravatar: markel_zhu@126.com
         # URL or path for the follow button
         follow_link: https://www.zhihu.com/people/freezon
         # Links to be shown on the bottom of the profile widget
@@ -268,8 +268,9 @@ widgets:
         type: links
         # Names and URLs of the sites
         links:
-            Hexo: https://hexo.io
-            Bulma: https://bulma.io
+            github: https://github.com
+            linux: https://kernel.org
+            zhihu: https://zhihu.com
     # Categories widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
@@ -278,17 +279,17 @@ widgets:
     # Recent posts widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
-        position: left
+        position: right
         type: recent_posts
     # Archives widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
-        position: left
+        position: right
         type: archives
     # Tags widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
-        position: left
+        position: right
         type: tags
         # How to order tags. For example 'name' to order by name in ascending order, and '-length' to order by number of posts in each tags in descending order
         order_by: name
