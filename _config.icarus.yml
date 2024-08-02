@@ -248,7 +248,7 @@ widgets:
                 icon: fab fa-github
                 url: https://github.com/Jared-ZDC
             zhihu:
-                icon: https://static.zhihu.com/heifetz/favicon.ico
+                icon: fab fa-zhihu
                 url: https://www.zhihu.com/people/freezon
     # Table of contents widget configurations
     -
