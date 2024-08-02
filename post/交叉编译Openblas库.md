@@ -3,6 +3,7 @@ title: 交叉编译Openblas库
 date: 2024-06-03 08:06:28
 tags: 笔记
 categories: 笔记
+toc: true
 ---
 # 下载源码
 ```bash
