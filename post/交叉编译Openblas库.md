@@ -4,9 +4,6 @@ date: 2024-06-03 08:06:28
 tags: 笔记
 categories: 笔记
 ---
-
-<!-- more -->
-
 # 下载源码
 ```bash
 git clone https://github.com/OpenMathLib/OpenBLAS.git
@@ -17,6 +14,9 @@ gmake TARGET=ARMV8 BINARY=64 HOSTCC=gcc CC=aarch64-linux-gnu-gcc FC=aarch64-linu
 
 #可以查看Targetlist.txt看支持哪些目标平台
 ```
+
+<!-- more -->
+
 ## 注意
 ![image](https://github.com/Jared-ZDC/markel/assets/17999499/bca51fc3-2640-463d-8cf8-2d5387540244)
 出现这种错误，是因为可能存在windows跟unix的脚本转换错误，这里使用dos2unix将系统目录整体处理一边
