@@ -231,7 +231,7 @@ widgets:
         # Author name
         author: Markel
         # Author title
-        author_title: 专业忽悠学者
+        author_title: 专业忽悠学者:
         # Author's current location
         location: 中国.湖南.长沙
         # URL or path to the avatar image
@@ -241,24 +241,15 @@ widgets:
         # Email address for the Gravatar
         gravatar: 
         # URL or path for the follow button
-        follow_link: https://github.com/ppoffice
+        follow_link: https://www.zhihu.com/people/freezon
         # Links to be shown on the bottom of the profile widget
         social_links:
             Github:
                 icon: fab fa-github
-                url: https://github.com/ppoffice
-            Facebook:
-                icon: fab fa-facebook
-                url: https://facebook.com
-            Twitter:
-                icon: fab fa-twitter
-                url: https://twitter.com
-            Dribbble:
-                icon: fab fa-dribbble
-                url: https://dribbble.com
-            RSS:
-                icon: fas fa-rss
-                url: /
+                url: https://github.com/Jared-ZDC
+            zhihu:
+                icon: https://static.zhihu.com/heifetz/favicon.ico
+                url: https://www.zhihu.com/people/freezon
     # Table of contents widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
