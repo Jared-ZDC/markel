@@ -354,6 +354,8 @@ def save_issue(issue, me, dir_name=BACKUP_DIR):
         f.write(f"---\n")
         f.write(f"title: {issue.title}\n")
         f.write(f"date: {issue.created_at}\n")
+        f.write(f"tags: {issue.get_labels()}\n")
+        f.write(f"categories: {issue.get_labels()}\n")
         f.write(f"---\n")
         
         #f.write(f"# [{issue.title}]({issue.html_url})\n\n")
