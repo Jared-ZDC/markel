@@ -10,6 +10,8 @@ categories: About
 
 爱好： 三分钟热度
 
+<!-- more -->
+
 编年史 : 
 
 2012年： 

@@ -4,6 +4,9 @@ date: 2024-06-03 08:06:28
 tags: 笔记
 categories: 笔记
 ---
+
+<!-- more -->
+
 # 下载源码
 ```bash
 git clone https://github.com/OpenMathLib/OpenBLAS.git
