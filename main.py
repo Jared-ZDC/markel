@@ -357,7 +357,7 @@ def save_issue(issue, me, dir_name=BACKUP_DIR):
         labels = issue.get_labels()
         label_names = ' '.join([label.name for label in labels])
         f.write(f"tags: {label_names}\n")
-        f.write(f"categories: {label_names\n")
+        f.write(f"categories: {label_names}\n")
         f.write(f"---\n")
         
         #f.write(f"# [{issue.title}]({issue.html_url})\n\n")
