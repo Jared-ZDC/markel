@@ -198,33 +198,11 @@ comment:
 # Donate plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
 donates:
-    # "Afdian.net" donate button configurations
-    -
-        type: afdian
-        # URL to the "Afdian.net" personal page
-        url: ''
     # Alipay donate button configurations
     -
         type: alipay
         # Alipay qrcode image URL
         qrcode: ''
-    # "Buy me a coffee" donate button configurations
-    -
-        type: buymeacoffee
-        # URL to the "Buy me a coffee" page
-        url: ''
-    # Patreon donate button configurations
-    -
-        type: patreon
-        # URL to the Patreon page
-        url: ''
-    # Paypal donate button configurations
-    -
-        type: paypal
-        # Paypal business ID or email address
-        business: ''
-        # Currency code
-        currency_code: USD
     # Wechat donate button configurations
     -
         type: wechat
@@ -262,7 +240,7 @@ widgets:
         # Author's current location
         location: 中国.湖南.长沙
         # URL or path to the avatar image
-        avatar: /img/touxiang.png
+        avatar: /img/logo.png
         # Whether show the rounded avatar image
         avatar_rounded: false
         # Email address for the Gravatar
