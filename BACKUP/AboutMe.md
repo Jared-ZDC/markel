@@ -1,6 +1,8 @@
 ---
 title: AboutMe
 date: 2024-05-29 12:07:59
+tags: <github.PaginatedList.PaginatedList object at 0x7ffb427faef0>
+categories: <github.PaginatedList.PaginatedList object at 0x7ffb427faef0>
 ---
 # 闲之君
 
