@@ -1,8 +1,8 @@
 ---
 title: Qemu Virt平台集成ARM PL080 DMA
 date: 2024-06-04 05:34:28
-tags: <github.PaginatedList.PaginatedList object at 0x7ffb427faef0>
-categories: <github.PaginatedList.PaginatedList object at 0x7ffb427faef0>
+tags: 笔记
+categories: 笔记
 ---
 # 背景
 最近有比较多的新员工入职，新员工入职如何更快的适应工作，需要通过一些虚拟项目进行工作培训；但是如果利用现有的芯片平台进行验证，有几个缺陷：

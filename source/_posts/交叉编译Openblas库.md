@@ -1,8 +1,8 @@
 ---
 title: 交叉编译Openblas库
 date: 2024-06-03 08:06:28
-tags: <github.PaginatedList.PaginatedList object at 0x7ffb427faef0>
-categories: <github.PaginatedList.PaginatedList object at 0x7ffb427faef0>
+tags: 笔记
+categories: 笔记
 ---
 # 下载源码
 ```bash
