@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/Jared-ZDC/markel</id><title>RSS feed of Jared-ZDC's markel</title><updated>2024-08-02T13:36:18.227153+00:00</updated><link href="https://github.com/Jared-ZDC/markel"/><link href="https://raw.githubusercontent.com/Jared-ZDC/markel/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/Jared-ZDC/markel/issues/16</id><title>聊一聊职业机会</title><updated>2024-08-02T13:36:18.514854+00:00</updated><content type="html"><![CDATA[<p>挺有意思的一件事，最近公司在做组织结构调整，有基层领导岗位的竞聘机会，于是给到自己团队内的核心骨干提示，希望相关骨干能够有勇气，有能力去竞聘一下，本以为会有比较多的同学尝试一下，但是实际的结果却出乎我的意料，最终竞聘的时候，没有一个同学敢于尝试；这里就引申了一个话题，作为研发人员，在职场的机会是什么？</p>
+<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/Jared-ZDC/markel</id><title>RSS feed of Jared-ZDC's markel</title><updated>2024-08-03T01:24:56.931800+00:00</updated><link href="https://github.com/Jared-ZDC/markel"/><link href="https://raw.githubusercontent.com/Jared-ZDC/markel/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/Jared-ZDC/markel/issues/16</id><title>聊一聊职业机会</title><updated>2024-08-03T01:24:57.294911+00:00</updated><content type="html"><![CDATA[<p>挺有意思的一件事，最近公司在做组织结构调整，有基层领导岗位的竞聘机会，于是给到自己团队内的核心骨干提示，希望相关骨干能够有勇气，有能力去竞聘一下，本以为会有比较多的同学尝试一下，但是实际的结果却出乎我的意料，最终竞聘的时候，没有一个同学敢于尝试；这里就引申了一个话题，作为研发人员，在职场的机会是什么？</p>
 <!-- more -->
 <h1>研发人员的职场发展</h1>
 <p>我在研发行业也算从业了10多年了，从一个基层研发到10来人的小团队leader到现在，其实看到过很多人包括自己在工作中经常会有的思考：</p>
@@ -10,7 +10,7 @@
 <li>要不要跳槽，换个公司</li>
 </ul>
 <p>在自己的职业发展过程中，一方面确实吃到了时代的红利，另外一方面也是</p>
-]]></content><link href="https://github.com/Jared-ZDC/markel/issues/16"/><category term="生活感悟"/><published>2024-06-04T05:54:14+00:00</published></entry><entry><id>https://github.com/Jared-ZDC/markel/issues/15</id><title>Qemu Virt平台集成ARM PL080 DMA</title><updated>2024-08-02T13:36:18.645012+00:00</updated><content type="html"><![CDATA[<h1>背景</h1>
+]]></content><link href="https://github.com/Jared-ZDC/markel/issues/16"/><category term="生活感悟"/><published>2024-06-04T05:54:14+00:00</published></entry><entry><id>https://github.com/Jared-ZDC/markel/issues/15</id><title>Qemu Virt平台集成ARM PL080 DMA</title><updated>2024-08-03T01:24:57.475181+00:00</updated><content type="html"><![CDATA[<h1>背景</h1>
 <p>最近有比较多的新员工入职，新员工入职如何更快的适应工作，需要通过一些虚拟项目进行工作培训；但是如果利用现有的芯片平台进行验证，有几个缺陷：</p>
 <ul>
 <li>当前芯片略显复杂，新员工接手理解难度较高</li>
@@ -203,7 +203,7 @@ index a03dcf428..9ff191a02 100644
 <h4>dma测试驱动</h4>
 <p>简单写一个dma测试代码，搬运两个地址的数据，并进行搬运后数据检查，看看中断是否正常上报</p>
 <pre><code></code></pre>
-]]></content><link href="https://github.com/Jared-ZDC/markel/issues/15"/><category term="笔记"/><published>2024-06-04T05:34:28+00:00</published></entry><entry><id>https://github.com/Jared-ZDC/markel/issues/14</id><title>交叉编译Openblas库</title><updated>2024-08-02T13:36:18.783399+00:00</updated><content type="html"><![CDATA[<h1>下载源码</h1>
+]]></content><link href="https://github.com/Jared-ZDC/markel/issues/15"/><category term="笔记"/><published>2024-06-04T05:34:28+00:00</published></entry><entry><id>https://github.com/Jared-ZDC/markel/issues/14</id><title>交叉编译Openblas库</title><updated>2024-08-03T01:24:57.660260+00:00</updated><content type="html"><![CDATA[<h1>下载源码</h1>
 <pre><code class="language-bash">git clone https://github.com/OpenMathLib/OpenBLAS.git
 </code></pre>
 <h1>编译</h1>
@@ -249,7 +249,7 @@ export OPENBLAS_NUM_THREADS=4
 ./sgemm.goto 
 
 </code></pre>
-]]></content><link href="https://github.com/Jared-ZDC/markel/issues/14"/><category term="笔记"/><published>2024-06-03T08:06:28+00:00</published></entry><entry><id>https://github.com/Jared-ZDC/markel/issues/10</id><title>AboutMe</title><updated>2024-08-02T13:36:18.926073+00:00</updated><content type="html"><![CDATA[<h1>闲之君</h1>
+]]></content><link href="https://github.com/Jared-ZDC/markel/issues/14"/><category term="笔记"/><published>2024-06-03T08:06:28+00:00</published></entry><entry><id>https://github.com/Jared-ZDC/markel/issues/10</id><title>AboutMe</title><updated>2024-08-03T01:24:57.821081+00:00</updated><content type="html"><![CDATA[<h1>闲之君</h1>
 <p>座右铭 ： <strong>闲看云卷云舒，坐等花开花谢~</strong></p>
 <p>爱好： 三分钟热度</p>
 <!-- more -->
