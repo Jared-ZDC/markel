@@ -15,7 +15,7 @@ MD_HEAD = """## [闲之君](https://github.com/Jared-ZDC/markel)
 [About Me](https://github.com/yihong0618/gitblog/issues/282)\r\n
 """
 
-POST_DIR = "post" 
+POST_DIR = "source/_posts"
 BACKUP_DIR = "BACKUP"
 ANCHOR_NUMBER = 5
 TOP_ISSUES_LABELS = ["Top"]
@@ -73,10 +73,10 @@ def _valid_xml_char_ordinal(c):
     codepoint = ord(c)
     # conditions ordered by presumed frequency
     return (
-        0x20 <= codepoint <= 0xD7FF
-        or codepoint in (0x9, 0xA, 0xD)
-        or 0xE000 <= codepoint <= 0xFFFD
-        or 0x10000 <= codepoint <= 0x10FFFF
+            0x20 <= codepoint <= 0xD7FF
+            or codepoint in (0x9, 0xA, 0xD)
+            or 0xE000 <= codepoint <= 0xFFFD
+            or 0x10000 <= codepoint <= 0x10FFFF
     )
 
 
@@ -154,7 +154,6 @@ def add_md_top(repo, md, me):
 
 
 def add_md_firends(repo, md, me):
-
     s = FRIENDS_TABLE_HEAD
     friends_issues = list(repo.get_issues(labels=FRIENDS_LABELS))
     if not FRIENDS_LABELS or not friends_issues:
@@ -241,18 +240,16 @@ def add_md_label(repo, md, me):
                 md.write("\n")
 
 
-def get_to_generate_issues(repo, dir_name, issue_number=None):
-    md_files = os.listdir(dir_name)
-    generated_issues_numbers = [
-        int(i.split("_")[0]) for i in md_files if i.split("_")[0].isdigit()
-    ]
-    to_generate_issues = [
-        i
-        for i in list(repo.get_issues())
-        if int(i.number) not in generated_issues_numbers
-    ]
-    if issue_number:
-        to_generate_issues.append(repo.get_issue(int(issue_number)))
+def get_to_generate_issues(repo, issue_number=None, rebuild=False):
+    to_generate_issues = []
+
+    if rebuild is True:
+        to_generate_issues = [i for i in list(repo.get_issues())]
+    else:
+        # 仅更新需要更改的
+        if issue_number is not None:
+            to_generate_issues.append(issue_number)
+
     return to_generate_issues
 
 
@@ -282,6 +279,7 @@ def generate_rss_feed(repo, filename, me):
         item.content(CDATA(marko.convert(body)), type="html")
     generator.atom_file(filename)
 
+
 def copy_dir_contents(src, dst):
     """
     将源目录src内的所有文件拷贝到目标目录dst中。
@@ -295,14 +293,15 @@ def copy_dir_contents(src, dst):
         for item in os.listdir(src):
             src_item = os.path.join(src, item)
             dst_item = os.path.join(dst, item)
-            
+
             if os.path.isdir(src_item):
                 # 如果是子目录，则递归拷贝
                 copy_dir_contents(src_item, dst_item)
             else:
                 # 如果是文件，则直接拷贝文件
                 shutil.copy2(src_item, dst_item)  # shutil.copy2() 用于拷贝文件并保留元数据
-                
+
+
 def main(token, repo_name, issue_number=None, dir_name=BACKUP_DIR):
     user = login(token)
     me = get_me(user)
@@ -313,41 +312,24 @@ def main(token, repo_name, issue_number=None, dir_name=BACKUP_DIR):
         func(repo, "README.md", me)
 
     generate_rss_feed(repo, "feed.xml", me)
-    to_generate_issues = get_to_generate_issues(repo, dir_name, issue_number)
 
-    if not os.path.exists(POST_DIR) :
-        os.makedirs(POST_DIR)
-        print(os.path.abspath(POST_DIR))
-    files=os.listdir(POST_DIR)
-    to_generate_issues_post = get_to_generate_issues(repo, POST_DIR, issue_number)
+    # 获取需要更新的issue
+    to_generate_issues = get_to_generate_issues(repo, issue_number)
+
     print(f"to_generate_issues = {to_generate_issues}")
-    print(f"to_generate_issues_post = {to_generate_issues_post}")
-    # del post folder
-    
-    for filename in files:
-        if filename == "readme":
-            continue
-        else:
-            file=os.path.join(POST_DIR, filename)
-            os.remove(file)
-            print(f"remove file {file}")
-
-    if not os.path.exists(POST_DIR) :
-        os.makedirs(POST_DIR)
 
     # save md files to backup folder
     for issue in to_generate_issues:
-        save_issue(issue, me, dir_name)
-    for issue in to_generate_issues_post:
+        save_issue(issue, me, BACKUP_DIR)
         save_issue(issue, me, POST_DIR)
 
-    shutil.rmtree("source/_posts")
-    copy_dir_contents(POST_DIR,"source/_posts/")
+    # shutil.rmtree("source/_posts")
+    # copy_dir_contents(POST_DIR, "source/_posts/")
 
 
 def save_issue(issue, me, dir_name=BACKUP_DIR):
     md_name = os.path.join(
-        #dir_name, f"{issue.number}_{issue.title.replace('/', '-').replace(' ', '.')}.md"
+        # dir_name, f"{issue.number}_{issue.title.replace('/', '-').replace(' ', '.')}.md"
         dir_name, f"{issue.title.replace('/', '-').replace(' ', '.')}.md"
     )
     with open(md_name, "w") as f:
@@ -360,8 +342,8 @@ def save_issue(issue, me, dir_name=BACKUP_DIR):
         f.write(f"categories: {label_names}\n")
         f.write(f"toc: true\n")
         f.write(f"---\n")
-        
-        #f.write(f"# [{issue.title}]({issue.html_url})\n\n")
+
+        # f.write(f"# [{issue.title}]({issue.html_url})\n\n")
         f.write(issue.body or "")
         if issue.comments:
             for c in issue.get_comments():
