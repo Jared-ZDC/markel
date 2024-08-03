@@ -313,15 +313,16 @@ def main(token, repo_name, issue_number=None, dir_name=BACKUP_DIR, rebuild=False
 
     generate_rss_feed(repo, "feed.xml", me)
 
+    if issue_number:
+        print(f"always call issue_number = {issue_number}")
+
     to_generate_issues = []
     # 获取需要更新的issue
     if rebuild is True:
-        to_generate_issues = [i for i in list(repo.get_issues())]
+        to_generate_issues = list(repo.get_issues())
     # to_generate_issues = get_to_generate_issues(repo, issue_number)
     else:
-        if issue_number is None:
-            return
-        else:
+        if issue_number:
             to_generate_issues.append(repo.get_issue(int(issue_number)))
 
     print(f"to_generate_issues = {to_generate_issues}")
