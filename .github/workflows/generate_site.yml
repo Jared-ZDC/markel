@@ -57,6 +57,9 @@ jobs:
           git commit -a -m 'update new blog' || echo "nothing to commit"
           git push || echo "nothing to push"
           
+      - name: Clean
+        run: hexo clean
+        
       - name: Build
         run: npm run build
       - name: Upload Pages artifact
