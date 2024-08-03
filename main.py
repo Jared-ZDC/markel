@@ -302,7 +302,7 @@ def copy_dir_contents(src, dst):
                 shutil.copy2(src_item, dst_item)  # shutil.copy2() 用于拷贝文件并保留元数据
 
 
-def main(token, repo_name, issue_number=None, dir_name=BACKUP_DIR):
+def main(token, repo_name, issue_number=None, dir_name=BACKUP_DIR, rebuild=False):
     user = login(token)
     me = get_me(user)
     repo = get_repo(user, repo_name)
@@ -313,15 +313,18 @@ def main(token, repo_name, issue_number=None, dir_name=BACKUP_DIR):
 
     generate_rss_feed(repo, "feed.xml", me)
 
+    to_generate_issues = [issue_number]
     # 获取需要更新的issue
-    to_generate_issues = get_to_generate_issues(repo, issue_number)
+    if rebuild is True:
+        to_generate_issues = [i for i in list(repo.get_issues())]
+    # to_generate_issues = get_to_generate_issues(repo, issue_number)
 
     print(f"to_generate_issues = {to_generate_issues}")
 
-    if to_generate_issues is not None:
+    if len(to_generate_issues) > 0:
         # save md files to backup folder
         for issue_id in to_generate_issues:
-            issue = repo.get_issue(int(issue_id))
+            issue = repo.get_issue(issue_id)
             save_issue(issue, me, BACKUP_DIR)
             save_issue(issue, me, POST_DIR)
 
@@ -330,7 +333,6 @@ def main(token, repo_name, issue_number=None, dir_name=BACKUP_DIR):
 
 
 def save_issue(issue, me, dir_name=BACKUP_DIR):
-
     if issue is None:
         return
 
