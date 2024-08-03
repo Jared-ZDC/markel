@@ -331,6 +331,8 @@ def save_issue(issue, me, dir_name=BACKUP_DIR):
 
     if issue is None:
         return
+    
+    print(f"save issue : {issue.title}")
 
     md_name = os.path.join(
         # dir_name, f"{issue.number}_{issue.title.replace('/', '-').replace(' ', '.')}.md"
