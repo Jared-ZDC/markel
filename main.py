@@ -321,10 +321,10 @@ def main(token, repo_name, issue_number=None, dir_name=BACKUP_DIR, rebuild=False
     else:
         if issue_number is None:
             return
+        else:
+            to_generate_issues.append(repo.get_issue(int(issue_number)))
 
     print(f"to_generate_issues = {to_generate_issues}")
-
-    to_generate_issues.append(repo.get_issue(int(issue_number)))
 
     if len(to_generate_issues) > 0:
         # save md files to backup folder
