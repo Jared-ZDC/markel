@@ -241,14 +241,14 @@ def add_md_label(repo, md, me):
 
 
 def get_to_generate_issues(repo, issue_number=None, rebuild=False):
-    to_generate_issues = []
+    to_generate_issues = None
 
     if rebuild is True:
         to_generate_issues = [i for i in list(repo.get_issues())]
     else:
         # 仅更新需要更改的
         if issue_number is not None:
-            to_generate_issues.append(issue_number)
+            to_generate_issues = [issue_number]
 
     return to_generate_issues
 
@@ -318,10 +318,12 @@ def main(token, repo_name, issue_number=None, dir_name=BACKUP_DIR):
 
     print(f"to_generate_issues = {to_generate_issues}")
 
-    # save md files to backup folder
-    for issue in to_generate_issues:
-        save_issue(issue, me, BACKUP_DIR)
-        save_issue(issue, me, POST_DIR)
+    if to_generate_issues is not None:
+        # save md files to backup folder
+        for issue_id in to_generate_issues:
+            issue = repo.get_issue(int(issue_id))
+            save_issue(issue, me, BACKUP_DIR)
+            save_issue(issue, me, POST_DIR)
 
     # shutil.rmtree("source/_posts")
     # copy_dir_contents(POST_DIR, "source/_posts/")
@@ -331,7 +333,7 @@ def save_issue(issue, me, dir_name=BACKUP_DIR):
 
     if issue is None:
         return
-    
+
     print(f"save issue : {issue.title}")
 
     md_name = os.path.join(
