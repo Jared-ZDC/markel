@@ -313,18 +313,22 @@ def main(token, repo_name, issue_number=None, dir_name=BACKUP_DIR, rebuild=False
 
     generate_rss_feed(repo, "feed.xml", me)
 
-    to_generate_issues = [issue_number]
+    to_generate_issues = []
     # 获取需要更新的issue
     if rebuild is True:
         to_generate_issues = [i for i in list(repo.get_issues())]
     # to_generate_issues = get_to_generate_issues(repo, issue_number)
+    else:
+        if issue_number is None:
+            return
 
     print(f"to_generate_issues = {to_generate_issues}")
 
+    to_generate_issues.append(repo.get_issue(int(issue_number)))
+
     if len(to_generate_issues) > 0:
         # save md files to backup folder
-        for issue_id in to_generate_issues:
-            issue = repo.get_issue(issue_id)
+        for issue in to_generate_issues:
             save_issue(issue, me, BACKUP_DIR)
             save_issue(issue, me, POST_DIR)
 
