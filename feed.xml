@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/Jared-ZDC/markel</id><title>RSS feed of Jared-ZDC's markel</title><updated>2024-08-03T08:25:54.282229+00:00</updated><link href="https://github.com/Jared-ZDC/markel"/><link href="https://raw.githubusercontent.com/Jared-ZDC/markel/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/Jared-ZDC/markel/issues/24</id><title>python In 机器学习(一)</title><updated>2024-08-03T08:25:54.494508+00:00</updated><content type="html"><![CDATA[<h1>LinearRegression</h1>
+<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/Jared-ZDC/markel</id><title>RSS feed of Jared-ZDC's markel</title><updated>2024-08-03T08:27:23.551863+00:00</updated><link href="https://github.com/Jared-ZDC/markel"/><link href="https://raw.githubusercontent.com/Jared-ZDC/markel/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/Jared-ZDC/markel/issues/24</id><title>python In 机器学习(一)</title><updated>2024-08-03T08:27:23.742950+00:00</updated><content type="html"><![CDATA[<h1>LinearRegression</h1>
 <p>这里简单记录一下最近学习的算法代码</p>
+<!-- more -->
 <h2>多元线性回归算法</h2>
 <p>这里主要通过sklearn获取数据进行实验</p>
 <pre><code class="language-python">from sklearn import *
@@ -76,7 +77,7 @@ if __name__ == &#x27;__main__&#x27;:
     print(f&quot;accuracy = {accuracy_score(y_test, y_pred)}&quot;)
 
 </code></pre>
-]]></content><link href="https://github.com/Jared-ZDC/markel/issues/24"/><category term="python 机器学习"/><published>2024-08-03T08:25:19+00:00</published></entry><entry><id>https://github.com/Jared-ZDC/markel/issues/16</id><title>聊一聊职业机会</title><updated>2024-08-03T08:25:54.588295+00:00</updated><content type="html"><![CDATA[<p>挺有意思的一件事，最近公司在做组织结构调整，有基层领导岗位的竞聘机会，于是给到自己团队内的核心骨干提示，希望相关骨干能够有勇气，有能力去竞聘一下，本以为会有比较多的同学尝试一下，但是实际的结果却出乎我的意料，最终竞聘的时候，没有一个同学敢于尝试；这里就引申了一个话题，作为研发人员，在职场的机会是什么？</p>
+]]></content><link href="https://github.com/Jared-ZDC/markel/issues/24"/><category term="python 机器学习"/><published>2024-08-03T08:25:19+00:00</published></entry><entry><id>https://github.com/Jared-ZDC/markel/issues/16</id><title>聊一聊职业机会</title><updated>2024-08-03T08:27:23.834715+00:00</updated><content type="html"><![CDATA[<p>挺有意思的一件事，最近公司在做组织结构调整，有基层领导岗位的竞聘机会，于是给到自己团队内的核心骨干提示，希望相关骨干能够有勇气，有能力去竞聘一下，本以为会有比较多的同学尝试一下，但是实际的结果却出乎我的意料，最终竞聘的时候，没有一个同学敢于尝试；这里就引申了一个话题，作为研发人员，在职场的机会是什么？</p>
 <!-- more -->
 <h1>回顾</h1>
 <p>我在研发行业也算从业了10多年了，从一个基层研发到10来人的小团队leader到现在leader了几十上百人，其实看到过很多人包括自己在工作中经常会有的思考：</p>
@@ -121,7 +122,7 @@ if __name__ == &#x27;__main__&#x27;:
 <p>说了这么多，其实笔者最后想总结的一点是：</p>
 <p>机会，是留给有准备的人，是留给主动争取的人，是留给有韧性、学习能力、懂做事方法的人，当机会出现的时候，就要积极的去尝试，争取，哪怕是去露个脸，也总比白白放过要强~</p>
 <p>这里也是提醒自己，<strong>生活中，有些机会稍纵即逝，把握与放弃，就在一念之间！</strong></p>
-]]></content><link href="https://github.com/Jared-ZDC/markel/issues/16"/><category term="生活感悟"/><published>2024-06-04T05:54:14+00:00</published></entry><entry><id>https://github.com/Jared-ZDC/markel/issues/15</id><title>Qemu Virt平台集成ARM PL080 DMA</title><updated>2024-08-03T08:25:54.699244+00:00</updated><content type="html"><![CDATA[<h1>背景</h1>
+]]></content><link href="https://github.com/Jared-ZDC/markel/issues/16"/><category term="生活感悟"/><published>2024-06-04T05:54:14+00:00</published></entry><entry><id>https://github.com/Jared-ZDC/markel/issues/15</id><title>Qemu Virt平台集成ARM PL080 DMA</title><updated>2024-08-03T08:27:23.941869+00:00</updated><content type="html"><![CDATA[<h1>背景</h1>
 <p>最近有比较多的新员工入职，新员工入职如何更快的适应工作，需要通过一些虚拟项目进行工作培训；但是如果利用现有的芯片平台进行验证，有几个缺陷：</p>
 <ul>
 <li>当前芯片略显复杂，新员工接手理解难度较高</li>
@@ -424,7 +425,7 @@ static int dmatest_init(void) {
 }
 
 </code></pre>
-]]></content><link href="https://github.com/Jared-ZDC/markel/issues/15"/><category term="程序人生"/><published>2024-06-04T05:34:28+00:00</published></entry><entry><id>https://github.com/Jared-ZDC/markel/issues/14</id><title>交叉编译Openblas库</title><updated>2024-08-03T08:25:54.821438+00:00</updated><content type="html"><![CDATA[<h1>下载源码</h1>
+]]></content><link href="https://github.com/Jared-ZDC/markel/issues/15"/><category term="程序人生"/><published>2024-06-04T05:34:28+00:00</published></entry><entry><id>https://github.com/Jared-ZDC/markel/issues/14</id><title>交叉编译Openblas库</title><updated>2024-08-03T08:27:24.060402+00:00</updated><content type="html"><![CDATA[<h1>下载源码</h1>
 <pre><code class="language-bash">git clone https://github.com/OpenMathLib/OpenBLAS.git
 </code></pre>
 <h1>编译</h1>
