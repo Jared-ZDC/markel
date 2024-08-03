@@ -1,8 +1,8 @@
 ---
 title: Qemu Virt平台集成ARM PL080 DMA
 date: 2024-06-04 05:34:28
-tags: 笔记
-categories: 笔记
+tags: 程序人生
+categories: 程序人生
 toc: true
 ---
 # 背景
@@ -207,4 +207,117 @@ build/qemu-system-aarch64 \
 ### dma搬运测试
 #### dma测试驱动
 简单写一个dma测试代码，搬运两个地址的数据，并进行搬运后数据检查，看看中断是否正常上报
+```c
+static ssize_t memcpy_write(struct file *file, const char __user *buf, size_t count, loff_t *ppos) {
+    // 实现 memcpy 文件的写操作
+    // 检查输入参数
+    if (count > BUFFER_SIZE) {
+        return -EINVAL;
+    }
+
+    // 从用户空间拷贝数据到 buffer_in
+    if (copy_from_user(buffer_in, buf, count)) {
+        return -EFAULT;
+    }
+
+    // 设置 DMA 传输参数
+    struct dma_async_tx_descriptor *desc;
+    dma_addr_t src_addr = virt_to_phys(buffer_in);
+    dma_addr_t dst_addr = virt_to_phys(buffer_out);
+
+    memset(buffer_in,0x5a,0x40);
+    memset(buffer_out,0x0,0x40);
+    pr_info("dump buffer_in\n");
+    dump(buffer_in, 0x40);
+
+
+    desc = dmaengine_prep_dma_memcpy(dma_chan, dst_addr, src_addr, 0x40, DMA_MEM_TO_MEM);
+    if (!desc) {
+        pr_err("Failed to prepare DMA transfer\n");
+        return -EBUSY;
+    }
+
+    desc->flags = DMA_CTRL_ACK | DMA_PREP_INTERRUPT;
+    // 设置 DMA 完成中断处理函数
+    desc->callback = dma_complete_callback;
+    desc->callback_param = NULL;
+
+    pr_err("prepare to sumbit\n");
+
+    // 启动 DMA 传输
+    dmaengine_submit(desc);
+    pr_err("prepare to async\n");
+    dma_async_issue_pending(dma_chan);
+
+    msleep(2000);
+
+    pr_info("dump buffer_out\n");
+    dump(buffer_out, 0x40);
+
+    // 等待 DMA 传输完成
+    /*
+    while (!dma_complete) {
+        cpu_relax();
+    }
+*/
+ //   dma_complete = false;
+    return count;
+}
+
+static int dmatest_device_init(void)
+{
+    // 1. 创建设备类
+    dmatest_device_class = class_create("dmatest_device_class");
+    if (IS_ERR(dmatest_device_class)) {
+        printk(KERN_ERR "Failed to create device class\n");
+        return PTR_ERR(dmatest_device_class);
+    }
+
+    // 2. 创建设备
+    dmatest_device = device_create(dmatest_device_class, NULL, MKDEV(230, 0), NULL, "dmatest");
+    if (IS_ERR(dmatest_device)) {
+        printk(KERN_ERR "Failed to create device\n");
+        class_destroy(dmatest_device_class);
+        return PTR_ERR(dmatest_device);
+    }
+
+    printk(KERN_INFO "dmatest_device created successfully\n");
+    return 0;
+}
+
+
+static int dmatest_init(void) {
+
+
+
+    if(dmatest_device_init())
+        return -1;
+
+    dmatest_dir = proc_mkdir("dmatest", NULL);
+    if (!dmatest_dir) {
+        pr_err("Failed to create dmatest directory in procfs\n");
+        return -ENOMEM;
+    }
+
+    memcpy_file = proc_create("memcpy", 0644, dmatest_dir, &memcpy_fops);
+    if (!memcpy_file) {
+        pr_err("Failed to create memcpy file in procfs\n");
+        remove_proc_entry("dmatest", NULL);
+        return -ENOMEM;
+    }
+
+    status_file = proc_create("status", 0444, dmatest_dir, &status_fops);
+    if (!status_file) {
+        pr_err("Failed to create status file in procfs\n");
+        remove_proc_entry("memcpy", dmatest_dir);
+        remove_proc_entry("dmatest", NULL);
+        return -ENOMEM;
+    }
+
+    pr_info("dmatest directory and files created in procfs\n");
+    return 0;
+}
+
 ```
+
+
