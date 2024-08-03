@@ -328,6 +328,10 @@ def main(token, repo_name, issue_number=None, dir_name=BACKUP_DIR):
 
 
 def save_issue(issue, me, dir_name=BACKUP_DIR):
+
+    if issue is None:
+        return
+
     md_name = os.path.join(
         # dir_name, f"{issue.number}_{issue.title.replace('/', '-').replace(' ', '.')}.md"
         dir_name, f"{issue.title.replace('/', '-').replace(' ', '.')}.md"
