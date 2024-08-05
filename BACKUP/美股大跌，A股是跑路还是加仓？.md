@@ -5,10 +5,10 @@ tags: 投资交易
 categories: 投资交易
 toc: true
 ---
-![84ccb09fedb4e88b8c19b2a9827f873](https://github.com/user-attachments/assets/c0bf3d12-56c7-4a2b-98e3-bf27d3146dae)
+![美股大跌，A股跑路还是加仓？！](https://github.com/user-attachments/assets/c0bf3d12-56c7-4a2b-98e3-bf27d3146dae)
 
 <!-- more -->
-![image](https://github.com/user-attachments/assets/7f11ab86-1155-4844-8442-de8b21b74348)
+![美股大跌](https://github.com/user-attachments/assets/7f11ab86-1155-4844-8442-de8b21b74348)
 
 这两天美股因为就业数据的问题，引起了机构对于投资美国的经济的担忧，导致美股大跌，那么对于A股是不是像上面说的，要赶紧跑路，因为从之前的情况来看，**美股大涨，A股小涨，美股小跌，A股大跌**；
 
@@ -16,4 +16,4 @@ toc: true
 
 
 另外，想说的是，尽管这两天美股、日经都是暴跌，但是A股还相对稳定，略跌一点，说明A股当前已经走出了部分独立行情；此外，人名币快速升值，也是提供了美元回流的一大理由；
-![image](https://github.com/user-attachments/assets/cf47da39-7fb5-46c3-8c21-6ed71e6d3d0b)
+![人名币升值](https://github.com/user-attachments/assets/cf47da39-7fb5-46c3-8c21-6ed71e6d3d0b)
