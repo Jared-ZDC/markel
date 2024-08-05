@@ -5,15 +5,17 @@
 
 
 ## 最近更新
+- [美股大跌，A股是跑路还是加仓？](https://github.com/Jared-ZDC/markel/issues/26)--2024-08-05
 - [关于原型验证的思考](https://github.com/Jared-ZDC/markel/issues/25)--2024-08-05
 - [python In 机器学习(一)](https://github.com/Jared-ZDC/markel/issues/24)--2024-08-03
 - [聊一聊职业机会](https://github.com/Jared-ZDC/markel/issues/16)--2024-06-04
 - [Qemu Virt平台集成ARM PL080 DMA](https://github.com/Jared-ZDC/markel/issues/15)--2024-06-04
-- [交叉编译Openblas库](https://github.com/Jared-ZDC/markel/issues/14)--2024-06-03
 ## python 机器学习
 - [python In 机器学习(一)](https://github.com/Jared-ZDC/markel/issues/24)--2024-08-03
 ## 总结思考
 - [关于原型验证的思考](https://github.com/Jared-ZDC/markel/issues/25)--2024-08-05
+## 投资交易
+- [美股大跌，A股是跑路还是加仓？](https://github.com/Jared-ZDC/markel/issues/26)--2024-08-05
 ## 生活感悟
 - [聊一聊职业机会](https://github.com/Jared-ZDC/markel/issues/16)--2024-06-04
 ## 程序人生
