@@ -20,13 +20,15 @@
 * 交流邮箱: markel_zhu@126.com
 
 ## 最近更新
+- [生活的懈怠之本周计划(20240812)](https://github.com/Jared-ZDC/markel/issues/29)--2024-08-12
 - [高级别同学的汰换沟通策略梳理](https://github.com/Jared-ZDC/markel/issues/28)--2024-08-12
 - [目标140斤以内，是不是3个月内可实现的？](https://github.com/Jared-ZDC/markel/issues/27)--2024-08-08
 - [美股大跌，A股是跑路还是加仓？](https://github.com/Jared-ZDC/markel/issues/26)--2024-08-05
 - [关于原型验证的思考](https://github.com/Jared-ZDC/markel/issues/25)--2024-08-05
-- [python In 机器学习(一)](https://github.com/Jared-ZDC/markel/issues/24)--2024-08-03
 ## python 机器学习
 - [python In 机器学习(一)](https://github.com/Jared-ZDC/markel/issues/24)--2024-08-03
+## 周计划总结
+- [生活的懈怠之本周计划(20240812)](https://github.com/Jared-ZDC/markel/issues/29)--2024-08-12
 ## 总结思考
 - [关于原型验证的思考](https://github.com/Jared-ZDC/markel/issues/25)--2024-08-05
 ## 投资交易
