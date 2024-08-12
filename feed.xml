@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/Jared-ZDC/markel</id><title>RSS feed of Jared-ZDC's markel</title><updated>2024-08-12T05:58:41.897975+00:00</updated><link href="https://github.com/Jared-ZDC/markel"/><link href="https://raw.githubusercontent.com/Jared-ZDC/markel/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/Jared-ZDC/markel/issues/28</id><title>高级别同学的汰换沟通策略梳理</title><updated>2024-08-12T05:58:42.167874+00:00</updated><content type="html"><![CDATA[<p>最近团队内给了一个高级别，并且是业务团队的小主管打了一个M-的绩效，按照公司要求，打了M- 的同学会被公司辞退；那么怎么样跟这个同学沟通，能够尽可能减小的对整个部门的影响，这是我这两周以来一直在思考的问题~</p>
+<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/Jared-ZDC/markel</id><title>RSS feed of Jared-ZDC's markel</title><updated>2024-08-12T09:11:43.621405+00:00</updated><link href="https://github.com/Jared-ZDC/markel"/><link href="https://raw.githubusercontent.com/Jared-ZDC/markel/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/Jared-ZDC/markel/issues/28</id><title>高级别同学的汰换沟通策略梳理</title><updated>2024-08-12T09:11:43.856587+00:00</updated><content type="html"><![CDATA[<p>最近团队内给了一个高级别，并且是业务团队的小主管打了一个M-的绩效，按照公司要求，打了M- 的同学会被公司辞退；那么怎么样跟这个同学沟通，能够尽可能减小的对整个部门的影响，这是我这两周以来一直在思考的问题~</p>
 <!-- more -->
 <p>坦白说，当时整个部门分成了5个小的业务团队，在我空降这个部门任职部长的时候，这个同学是最为配合工作的一个主管，我花费的沟通成本是最低的；</p>
 <p>但是从实际的这两年的共同工作来看，这个同学有一个比较明显的问题，可能也是工作那么多年以来的习惯，很多事情吩咐下去，虽然口头上不会反驳一点，但是实际在完成这件事情的时候，会有一大堆的问题以及理由告诉你，这件事做不到；这个在我的职业生涯里面，其实是很难以接受的，因为对于高级别的同学，其实要求的是问题的解决能力以及规划能力，并不是执行能力；对于部门的业务方向上的事情，需要有自己的解决策略，而并不是每次面对事情的时候，先给我抛出一大堆的困难，然后告诉我，这件事情很难做；</p>
@@ -41,7 +41,7 @@
 <p>实际在职场中，汰换、离职是非常正常的，特别是在一些竞争激烈的行业里面，如果找不准自己的位置以及无法体现出自我的核心价值，是非常容易被汰换的；
 无论做什么事情，都要去思考一下，我如果做了这件事，我如何能够体现出我跟别人做的不一样的地方，无论是效率、结果还是方式，如果跟别人做不出差别，或许下一个被替代的就是自己；
 与君共勉！</p>
-]]></content><link href="https://github.com/Jared-ZDC/markel/issues/28"/><category term="生活感悟"/><published>2024-08-12T05:58:01+00:00</published></entry><entry><id>https://github.com/Jared-ZDC/markel/issues/27</id><title>目标140斤以内，是不是3个月内可实现的？</title><updated>2024-08-12T05:58:42.337983+00:00</updated><content type="html"><![CDATA[<p>谈减肥谈了很多次了，包括在朋友圈晒目标，跟朋友下决心，等等，经历过很多次，但是最终都失败了，似乎一直处于&quot;<em><strong>下决心，开始控制饮食+运动，然后中途放弃，最后又开始下决心</strong></em>&quot;的怪圈，始终无法彻底走出来；</p>
+]]></content><link href="https://github.com/Jared-ZDC/markel/issues/28"/><category term="生活感悟"/><published>2024-08-12T05:58:01+00:00</published></entry><entry><id>https://github.com/Jared-ZDC/markel/issues/27</id><title>目标140斤以内，是不是3个月内可实现的？</title><updated>2024-08-12T09:11:43.991580+00:00</updated><content type="html"><![CDATA[<p>谈减肥谈了很多次了，包括在朋友圈晒目标，跟朋友下决心，等等，经历过很多次，但是最终都失败了，似乎一直处于&quot;<em><strong>下决心，开始控制饮食+运动，然后中途放弃，最后又开始下决心</strong></em>&quot;的怪圈，始终无法彻底走出来；</p>
 <p>所以，我们需要仔细分析一下，这个项目应该要怎么做？</p>
 <!-- more -->
 <h1>项目分解</h1>
@@ -58,14 +58,14 @@
 <p>所以正确的目标应该是： </p>
 <p><strong>在10个月以内，体脂率从30%降低到15%，脂肪减去16.5kg， 每天至少保持500大卡的热量缺口！</strong></p>
 <p>所以，尝试按照现在正常的目标进行减脂，最后，我们10个月后，看看效果；</p>
-]]></content><link href="https://github.com/Jared-ZDC/markel/issues/27"/><category term="生活感悟"/><published>2024-08-08T08:34:05+00:00</published></entry><entry><id>https://github.com/Jared-ZDC/markel/issues/26</id><title>美股大跌，A股是跑路还是加仓？</title><updated>2024-08-12T05:58:42.457163+00:00</updated><content type="html"><![CDATA[<p><img src="https://github.com/user-attachments/assets/c0bf3d12-56c7-4a2b-98e3-bf27d3146dae" alt="美股大跌，A股跑路还是加仓？！" /></p>
+]]></content><link href="https://github.com/Jared-ZDC/markel/issues/27"/><category term="生活感悟"/><published>2024-08-08T08:34:05+00:00</published></entry><entry><id>https://github.com/Jared-ZDC/markel/issues/26</id><title>美股大跌，A股是跑路还是加仓？</title><updated>2024-08-12T09:11:44.097755+00:00</updated><content type="html"><![CDATA[<p><img src="https://github.com/user-attachments/assets/c0bf3d12-56c7-4a2b-98e3-bf27d3146dae" alt="美股大跌，A股跑路还是加仓？！" /></p>
 <!-- more -->
 <p><img src="https://github.com/user-attachments/assets/7f11ab86-1155-4844-8442-de8b21b74348" alt="美股大跌" /></p>
 <p>这两天美股因为就业数据的问题，引起了机构对于投资美国的经济的担忧，导致美股大跌，那么对于A股是不是像上面说的，要赶紧跑路，因为从之前的情况来看，<strong>美股大涨，A股小涨，美股小跌，A股大跌</strong>；</p>
 <p>但是从我的角度，当然目前只是感性的猜测，这几年美股加息，美元回流，推高了美股股市，在目前的全球政治局势下看，欧洲已经有点停滞不前了，中东战争进一步恶化的情况下，欧洲影响可能更大；目前可以容纳资本的，或许A股、港股是一个比较好的地方，虽然国内的经济数据也不好看，但是整体上，目前还能过得下去； 所以国内重仓高息分红的银行，我认为是比较保险的避险资产； </p>
 <p>另外，想说的是，尽管这两天美股、日经都是暴跌，但是A股还相对稳定，略跌一点，说明A股当前已经走出了部分独立行情；此外，人名币快速升值，也是提供了美元回流的一大理由；
 <img src="https://github.com/user-attachments/assets/cf47da39-7fb5-46c3-8c21-6ed71e6d3d0b" alt="人名币升值" /></p>
-]]></content><link href="https://github.com/Jared-ZDC/markel/issues/26"/><category term="投资交易"/><published>2024-08-05T11:20:19+00:00</published></entry><entry><id>https://github.com/Jared-ZDC/markel/issues/25</id><title>关于原型验证的思考</title><updated>2024-08-12T05:58:42.575222+00:00</updated><content type="html"><![CDATA[<h1>摘要</h1>
+]]></content><link href="https://github.com/Jared-ZDC/markel/issues/26"/><category term="投资交易"/><published>2024-08-05T11:20:19+00:00</published></entry><entry><id>https://github.com/Jared-ZDC/markel/issues/25</id><title>关于原型验证的思考</title><updated>2024-08-12T09:11:44.202300+00:00</updated><content type="html"><![CDATA[<h1>摘要</h1>
 <p>在芯片项目的验证阶段中，主要分为硅前以及硅后两个大的阶段，在不同的阶段，各个团队的验证侧重点略有不同，但是同样的需要保证验证的质量，而验证的质量从验证的完备性去衡量；</p>
 <p>而实际操作过程中，会根据芯片自研程度、模块规模、商用化目的、人力投入、职责划分等情况，验证策略会跟随着做出一些适时的调整，最终以在现有条件下达成芯片验证的目的；</p>
 <p>在目前大部分芯片项目中，真正核心自研的东西其实并不太多，大部分情况下，更多的是三方集成+自研的模式，所以根据这种情况，项目应该以什么样的策略去应对，这个也是本文想要总结思考的；</p>
@@ -108,7 +108,7 @@
 <li>以用代验，通过验证系统，其它模块配合验证，以用代验的方式，完成验证；(比如上述D类型模块)</li>
 </ul>
 <p>在原型验证的不同阶段，职责也会有相应的区分，因此在侧重点上也有一定的倾向，这里会对原型验证的自动化程度有比较高的要求，只有在高度自动化的情况下，可以实现以最小的人力，最快的速度完成对于相应验证工作的快速闭环以及人力的节省；</p>
-]]></content><link href="https://github.com/Jared-ZDC/markel/issues/25"/><category term="总结思考"/><published>2024-08-05T07:47:01+00:00</published></entry><entry><id>https://github.com/Jared-ZDC/markel/issues/24</id><title>python In 机器学习(一)</title><updated>2024-08-12T05:58:42.689694+00:00</updated><content type="html"><![CDATA[<h1>LinearRegression</h1>
+]]></content><link href="https://github.com/Jared-ZDC/markel/issues/25"/><category term="总结思考"/><published>2024-08-05T07:47:01+00:00</published></entry><entry><id>https://github.com/Jared-ZDC/markel/issues/24</id><title>python In 机器学习(一)</title><updated>2024-08-12T09:11:44.320536+00:00</updated><content type="html"><![CDATA[<h1>LinearRegression</h1>
 <p>这里简单记录一下最近学习的算法代码</p>
 <!-- more -->
 <h2>多元线性回归算法</h2>
@@ -186,7 +186,7 @@ if __name__ == &#x27;__main__&#x27;:
     print(f&quot;accuracy = {accuracy_score(y_test, y_pred)}&quot;)
 
 </code></pre>
-]]></content><link href="https://github.com/Jared-ZDC/markel/issues/24"/><category term="python 机器学习"/><published>2024-08-03T08:25:19+00:00</published></entry><entry><id>https://github.com/Jared-ZDC/markel/issues/16</id><title>聊一聊职业机会</title><updated>2024-08-12T05:58:42.807957+00:00</updated><content type="html"><![CDATA[<p>挺有意思的一件事，最近公司在做组织结构调整，有基层领导岗位的竞聘机会，于是给到自己团队内的核心骨干提示，希望相关骨干能够有勇气，有能力去竞聘一下，本以为会有比较多的同学尝试一下，但是实际的结果却出乎我的意料，最终竞聘的时候，没有一个同学敢于尝试；这里就引申了一个话题，作为研发人员，在职场的机会是什么？</p>
+]]></content><link href="https://github.com/Jared-ZDC/markel/issues/24"/><category term="python 机器学习"/><published>2024-08-03T08:25:19+00:00</published></entry><entry><id>https://github.com/Jared-ZDC/markel/issues/16</id><title>聊一聊职业机会</title><updated>2024-08-12T09:11:44.432068+00:00</updated><content type="html"><![CDATA[<p>挺有意思的一件事，最近公司在做组织结构调整，有基层领导岗位的竞聘机会，于是给到自己团队内的核心骨干提示，希望相关骨干能够有勇气，有能力去竞聘一下，本以为会有比较多的同学尝试一下，但是实际的结果却出乎我的意料，最终竞聘的时候，没有一个同学敢于尝试；这里就引申了一个话题，作为研发人员，在职场的机会是什么？</p>
 <!-- more -->
 <h1>回顾</h1>
 <p>我在研发行业也算从业了10多年了，从一个基层研发到10来人的小团队leader到现在leader了几十上百人，其实看到过很多人包括自己在工作中经常会有的思考：</p>
@@ -231,7 +231,7 @@ if __name__ == &#x27;__main__&#x27;:
 <p>说了这么多，其实笔者最后想总结的一点是：</p>
 <p>机会，是留给有准备的人，是留给主动争取的人，是留给有韧性、学习能力、懂做事方法的人，当机会出现的时候，就要积极的去尝试，争取，哪怕是去露个脸，也总比白白放过要强~</p>
 <p>这里也是提醒自己，<strong>生活中，有些机会稍纵即逝，把握与放弃，就在一念之间！</strong></p>
-]]></content><link href="https://github.com/Jared-ZDC/markel/issues/16"/><category term="生活感悟"/><published>2024-06-04T05:54:14+00:00</published></entry><entry><id>https://github.com/Jared-ZDC/markel/issues/15</id><title>Qemu Virt平台集成ARM PL080 DMA</title><updated>2024-08-12T05:58:42.934996+00:00</updated><content type="html"><![CDATA[<h1>背景</h1>
+]]></content><link href="https://github.com/Jared-ZDC/markel/issues/16"/><category term="生活感悟"/><published>2024-06-04T05:54:14+00:00</published></entry><entry><id>https://github.com/Jared-ZDC/markel/issues/15</id><title>Qemu Virt平台集成ARM PL080 DMA</title><updated>2024-08-12T09:11:44.548981+00:00</updated><content type="html"><![CDATA[<h1>背景</h1>
 <p>最近有比较多的新员工入职，新员工入职如何更快的适应工作，需要通过一些虚拟项目进行工作培训；但是如果利用现有的芯片平台进行验证，有几个缺陷：</p>
 <ul>
 <li>当前芯片略显复杂，新员工接手理解难度较高</li>
@@ -534,7 +534,7 @@ static int dmatest_init(void) {
 }
 
 </code></pre>
-]]></content><link href="https://github.com/Jared-ZDC/markel/issues/15"/><category term="程序人生"/><published>2024-06-04T05:34:28+00:00</published></entry><entry><id>https://github.com/Jared-ZDC/markel/issues/14</id><title>交叉编译Openblas库</title><updated>2024-08-12T05:58:43.076293+00:00</updated><content type="html"><![CDATA[<h1>下载源码</h1>
+]]></content><link href="https://github.com/Jared-ZDC/markel/issues/15"/><category term="程序人生"/><published>2024-06-04T05:34:28+00:00</published></entry><entry><id>https://github.com/Jared-ZDC/markel/issues/14</id><title>交叉编译Openblas库</title><updated>2024-08-12T09:11:44.664350+00:00</updated><content type="html"><![CDATA[<h1>下载源码</h1>
 <pre><code class="language-bash">git clone https://github.com/OpenMathLib/OpenBLAS.git
 </code></pre>
 <h1>编译</h1>

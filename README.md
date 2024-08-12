@@ -1,8 +1,23 @@
 ## [闲之君](https://github.com/Jared-ZDC/markel)
 **闲看花开花落，静待云卷云舒！**
 
-[About Me](https://github.com/yihong0618/gitblog/issues/282)
+[About Me](https://markel.top/about/index.html)
 
+
+**关键描述：**
+
+* 湖大本科毕业
+* IT从业狗
+* 软硬件性能优化
+* Linux爱好者
+* 代码阅读专家
+* 芯片验证行业多年
+* AI起步学者
+* 量化交易入门狗
+* 幻想财富自由
+* 大厂旅行者
+* 不想做股票投资的程序员不是好管理者
+* 交流邮箱: markel_zhu@126.com
 
 ## 最近更新
 - [高级别同学的汰换沟通策略梳理](https://github.com/Jared-ZDC/markel/issues/28)--2024-08-12
