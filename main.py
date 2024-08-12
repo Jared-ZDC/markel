@@ -10,7 +10,7 @@ from github import Github
 from lxml.etree import CDATA
 from marko.ext.gfm import gfm as marko
 
-MD_HEAD = """## [闲之君](https://github.com/Jared-ZDC/markel)
+MD_HEAD = """## [自言堂](https://github.com/Jared-ZDC/markel)
 **闲看花开花落，静待云卷云舒！**\r\n
 [About Me](https://markel.top/about/index.html)\r\n
 
