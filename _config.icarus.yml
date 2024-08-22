@@ -195,6 +195,7 @@ comment:
     theme: noborder_light            # 可选填
     lang: zh-CN                      # 可选填，默认为 en
     lazy: false                       # 可选填，默认为 false
+    defaultCommentOrder: newest
 
 # Donate plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
