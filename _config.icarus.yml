@@ -196,6 +196,8 @@ comment:
     lang: zh-CN                      # 可选填，默认为 en
     lazy: false                       # 可选填，默认为 false
     defaultCommentOrder: newest
+    commentOrder: newest
+    order: newest
 
 # Donate plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
