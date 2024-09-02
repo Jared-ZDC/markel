@@ -20,7 +20,7 @@
 * 交流邮箱: markel_zhu@126.com
 
 ## 最近更新
-- [周计划及总结（20240802）](https://github.com/Jared-ZDC/markel/issues/34)--2024-09-02
+- [周总结及计划（20240902）](https://github.com/Jared-ZDC/markel/issues/34)--2024-09-02
 - [周总结及计划（20240826）](https://github.com/Jared-ZDC/markel/issues/33)--2024-08-27
 - [linux dma一致性分析](https://github.com/Jared-ZDC/markel/issues/32)--2024-08-27
 - [《华为高绩效管理PBC：上下同欲/力出一孔》](https://github.com/Jared-ZDC/markel/issues/31)--2024-08-20
@@ -28,7 +28,7 @@
 ## python 机器学习
 - [python In 机器学习(一)](https://github.com/Jared-ZDC/markel/issues/24)--2024-08-03
 ## 周计划总结
-- [周计划及总结（20240802）](https://github.com/Jared-ZDC/markel/issues/34)--2024-09-02
+- [周总结及计划（20240902）](https://github.com/Jared-ZDC/markel/issues/34)--2024-09-02
 - [周总结及计划（20240826）](https://github.com/Jared-ZDC/markel/issues/33)--2024-08-27
 - [周总结及计划（20240819-20240825）](https://github.com/Jared-ZDC/markel/issues/30)--2024-08-19
 - [生活的懈怠之本周计划(20240812)](https://github.com/Jared-ZDC/markel/issues/29)--2024-08-12
