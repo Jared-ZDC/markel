@@ -19,6 +19,6 @@ date: 2024-06-01 11:13:38
 * 不想做股票投资的程序员不是好管理者
 * 交流邮箱: *markel_zhu@126.com*
 
-<img src="/img/myimg.jpg" >
+<img src="/img/tx.jpg" >
 
 
