@@ -240,7 +240,7 @@ widgets:
         # Author's current location
         location: 中国.湖南.长沙
         # URL or path to the avatar image
-        avatar: /img/myimg.jpg
+        avatar: /img/tx.jpg
         # Whether show the rounded avatar image
         avatar_rounded: false
         # Email address for the Gravatar
