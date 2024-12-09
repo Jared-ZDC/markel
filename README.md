@@ -20,11 +20,11 @@
 * 交流邮箱: markel_zhu@126.com
 
 ## 最近更新
+- [AI 全栈工程师实现路径](https://github.com/Jared-ZDC/markel/issues/43)--2024-12-09
 - [近期乱想](https://github.com/Jared-ZDC/markel/issues/42)--2024-11-18
 - [国庆小思](https://github.com/Jared-ZDC/markel/issues/40)--2024-10-07
 - [近期思考（20240918）](https://github.com/Jared-ZDC/markel/issues/38)--2024-09-18
 - [始于颜值，忠于人品，陷于才华](https://github.com/Jared-ZDC/markel/issues/37)--2024-09-12
-- [AI 学习架构梳理](https://github.com/Jared-ZDC/markel/issues/36)--2024-09-12
 ## python 机器学习
 - [python In 机器学习(一)](https://github.com/Jared-ZDC/markel/issues/24)--2024-08-03
 ## 周计划总结
@@ -54,5 +54,6 @@
 - [Qemu Virt平台集成ARM PL080 DMA](https://github.com/Jared-ZDC/markel/issues/15)--2024-06-04
 - [交叉编译Openblas库](https://github.com/Jared-ZDC/markel/issues/14)--2024-06-03
 ## 读书笔记
+- [AI 全栈工程师实现路径](https://github.com/Jared-ZDC/markel/issues/43)--2024-12-09
 - [什么是卷积](https://github.com/Jared-ZDC/markel/issues/35)--2024-09-03
 - [《华为高绩效管理PBC：上下同欲/力出一孔》](https://github.com/Jared-ZDC/markel/issues/31)--2024-08-20
