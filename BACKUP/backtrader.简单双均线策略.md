@@ -84,3 +84,102 @@ if __name__ == '__main__':
     print('Final Portfolio Value: %.2f' % cerebro.broker.getvalue())
 
 ```
+
+---
+
+增加买卖的监控信号：notify_order / notify_trader
+```python
+# 简单用双均线，测试一下
+from __future__ import (absolute_import, division, print_function,
+                        unicode_literals)
+
+import time
+
+from backtest.tool import *
+import backtrader as bt
+
+
+# Create a Stratey
+class TestStrategy(bt.Strategy):
+    params = (
+        ('period_low', 5),
+        ('period_high', 20),
+    )
+
+    def log(self, txt, dt=None):
+        ''' Logging function for this strategy'''
+        dt = dt or self.datas[0].datetime.date(0)
+        print('%s, %s' % (dt.isoformat(), txt))
+
+    def __init__(self):
+        self.sma_low = bt.indicators.SimpleMovingAverage(self.datas[0].close, period=self.params.period_low)
+        self.sma_high = bt.indicators.SimpleMovingAverage(self.datas[0].close, period=self.params.period_high)
+        self.sell_sig = self.sma_high > self.sma_low
+        self.buy_sig = self.sma_high < self.sma_low
+        self.last_sig = False  # 上一次信号是买或者是卖， False表示上一次是卖
+
+    def next(self):
+        if self.sell_sig[0] and self.last_sig:
+            self.sell()
+            self.last_sig = False
+
+        if self.buy_sig[0] and not self.last_sig:
+            self.buy()
+            self.last_sig = True
+    def notify_order(self, order):
+        if order.status in [order.Submitted, order.Accepted]:
+            # Buy/Sell order submitted/accepted to/by broker - Nothing to do
+            return
+
+        # Check if an order has been completed
+        # Attention: broker could reject order if not enough cash
+        if order.status in [order.Completed]:
+            if order.isbuy():
+                self.log(
+                    'BUY EXECUTED, Price: %.2f, Cost: %.2f, Comm %.2f' %
+                    (order.executed.price,
+                     order.executed.value,
+                     order.executed.comm))
+            else:  # Sell
+                self.log('SELL EXECUTED, Price: %.2f, Cost: %.2f, Comm %.2f' %
+                         (order.executed.price,
+                          order.executed.value,
+                          order.executed.comm))
+        elif order.status in [order.Canceled, order.Margin, order.Rejected]:
+            self.log('Order Canceled/Margin/Rejected')
+
+    def notify_trade(self, trade):
+        if not trade.isclosed:
+            return
+
+        self.log('OPERATION PROFIT, GROSS %.2f, NET %.2f' % (trade.pnl, trade.pnlcomm))
+
+
+if __name__ == '__main__':
+    # Create a cerebro entity
+    cerebro = bt.Cerebro()
+
+    # Add a strategy
+    cerebro.addstrategy(TestStrategy)
+
+    df = load_data_from_csv("000001.SZ")
+    # 加载数据
+    data = bt.feeds.PandasData(dataname=df, fromdate=pd.to_datetime("20100101", format='%Y%m%d'),
+                               todate=pd.to_datetime("20241201", format='%Y%m%d'))
+
+    # Add the Data Feed to Cerebro
+    cerebro.adddata(data)
+
+    # Set our desired cash start
+    cerebro.broker.setcash(100000.0)
+
+    # Print out the starting conditions
+    print('Starting Portfolio Value: %.2f' % cerebro.broker.getvalue())
+
+    # Run over everything
+    cerebro.run()
+
+    # Print out the final result
+    print('Final Portfolio Value: %.2f' % cerebro.broker.getvalue())
+
+```
