@@ -20,11 +20,11 @@
 * 交流邮箱: markel_zhu@126.com
 
 ## 最近更新
+- [2025年的计划](https://github.com/Jared-ZDC/markel/issues/48)--2024-12-29
 - [backtrader 简单双均线策略](https://github.com/Jared-ZDC/markel/issues/47)--2024-12-20
 - [backtrader （一）](https://github.com/Jared-ZDC/markel/issues/46)--2024-12-19
 - [自洽](https://github.com/Jared-ZDC/markel/issues/45)--2024-12-10
 - [成年人的世界，有些人注定只能陪你一阵子](https://github.com/Jared-ZDC/markel/issues/44)--2024-12-09
-- [AI 全栈工程师实现路径](https://github.com/Jared-ZDC/markel/issues/43)--2024-12-09
 ## python 机器学习
 - [python In 机器学习(一)](https://github.com/Jared-ZDC/markel/issues/24)--2024-08-03
 ## 周计划总结
@@ -32,7 +32,10 @@
 - [周总结及计划（20240826）](https://github.com/Jared-ZDC/markel/issues/33)--2024-08-27
 - [周总结及计划（20240819-20240825）](https://github.com/Jared-ZDC/markel/issues/30)--2024-08-19
 - [生活的懈怠之本周计划(20240812)](https://github.com/Jared-ZDC/markel/issues/29)--2024-08-12
+## 年度计划
+- [2025年的计划](https://github.com/Jared-ZDC/markel/issues/48)--2024-12-29
 ## 总结思考
+- [2025年的计划](https://github.com/Jared-ZDC/markel/issues/48)--2024-12-29
 - [AI 学习架构梳理](https://github.com/Jared-ZDC/markel/issues/36)--2024-09-12
 - [linux dma一致性分析](https://github.com/Jared-ZDC/markel/issues/32)--2024-08-27
 - [关于原型验证的思考](https://github.com/Jared-ZDC/markel/issues/25)--2024-08-05
