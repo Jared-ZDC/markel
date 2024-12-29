@@ -35,7 +35,6 @@
 ## 年度计划
 - [2025年的计划](https://github.com/Jared-ZDC/markel/issues/48)--2024-12-29
 ## 总结思考
-- [2025年的计划](https://github.com/Jared-ZDC/markel/issues/48)--2024-12-29
 - [AI 学习架构梳理](https://github.com/Jared-ZDC/markel/issues/36)--2024-09-12
 - [linux dma一致性分析](https://github.com/Jared-ZDC/markel/issues/32)--2024-08-27
 - [关于原型验证的思考](https://github.com/Jared-ZDC/markel/issues/25)--2024-08-05
