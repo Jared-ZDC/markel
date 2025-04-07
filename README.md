@@ -20,11 +20,11 @@
 * 交流邮箱: markel_zhu@126.com
 
 ## 最近更新
+- [协鑫科技 --- 二次失利总结](https://github.com/Jared-ZDC/markel/issues/50)--2025-04-07
 - [2025 预算及消费](https://github.com/Jared-ZDC/markel/issues/49)--2025-03-10
 - [2025年的计划](https://github.com/Jared-ZDC/markel/issues/48)--2024-12-29
 - [backtrader 简单双均线策略](https://github.com/Jared-ZDC/markel/issues/47)--2024-12-20
 - [backtrader （一）](https://github.com/Jared-ZDC/markel/issues/46)--2024-12-19
-- [自洽](https://github.com/Jared-ZDC/markel/issues/45)--2024-12-10
 ## python 机器学习
 - [python In 机器学习(一)](https://github.com/Jared-ZDC/markel/issues/24)--2024-08-03
 ## 周计划总结
@@ -40,6 +40,7 @@
 - [linux dma一致性分析](https://github.com/Jared-ZDC/markel/issues/32)--2024-08-27
 - [关于原型验证的思考](https://github.com/Jared-ZDC/markel/issues/25)--2024-08-05
 ## 投资交易
+- [协鑫科技 --- 二次失利总结](https://github.com/Jared-ZDC/markel/issues/50)--2025-04-07
 - [美股大跌，A股是跑路还是加仓？](https://github.com/Jared-ZDC/markel/issues/26)--2024-08-05
 ## 生活感悟
 - [自洽](https://github.com/Jared-ZDC/markel/issues/45)--2024-12-10
