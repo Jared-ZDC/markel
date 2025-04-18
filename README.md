@@ -27,22 +27,17 @@
 - [backtrader （一）](https://github.com/Jared-ZDC/markel/issues/46)--2024-12-19
 ## python 机器学习
 - [python In 机器学习(一)](https://github.com/Jared-ZDC/markel/issues/24)--2024-08-03
-## 周计划总结
 - [周总结及计划（20240902）](https://github.com/Jared-ZDC/markel/issues/34)--2024-09-02
 - [周总结及计划（20240826）](https://github.com/Jared-ZDC/markel/issues/33)--2024-08-27
 - [周总结及计划（20240819-20240825）](https://github.com/Jared-ZDC/markel/issues/30)--2024-08-19
 - [生活的懈怠之本周计划(20240812)](https://github.com/Jared-ZDC/markel/issues/29)--2024-08-12
-## 年度计划
 - [2025 预算及消费](https://github.com/Jared-ZDC/markel/issues/49)--2025-03-10
 - [2025年的计划](https://github.com/Jared-ZDC/markel/issues/48)--2024-12-29
-## 总结思考
 - [AI 学习架构梳理](https://github.com/Jared-ZDC/markel/issues/36)--2024-09-12
 - [linux dma一致性分析](https://github.com/Jared-ZDC/markel/issues/32)--2024-08-27
 - [关于原型验证的思考](https://github.com/Jared-ZDC/markel/issues/25)--2024-08-05
-## 投资交易
 - [协鑫科技 --- 二次失利总结](https://github.com/Jared-ZDC/markel/issues/50)--2025-04-07
 - [美股大跌，A股是跑路还是加仓？](https://github.com/Jared-ZDC/markel/issues/26)--2024-08-05
-## 生活感悟
 - [自洽](https://github.com/Jared-ZDC/markel/issues/45)--2024-12-10
 - [成年人的世界，有些人注定只能陪你一阵子](https://github.com/Jared-ZDC/markel/issues/44)--2024-12-09
 - [近期乱想](https://github.com/Jared-ZDC/markel/issues/42)--2024-11-18
@@ -56,12 +51,10 @@
 - [聊一聊职业机会](https://github.com/Jared-ZDC/markel/issues/16)--2024-06-04
 </details>
 
-## 程序人生
 - [backtrader 简单双均线策略](https://github.com/Jared-ZDC/markel/issues/47)--2024-12-20
 - [backtrader （一）](https://github.com/Jared-ZDC/markel/issues/46)--2024-12-19
 - [Qemu Virt平台集成ARM PL080 DMA](https://github.com/Jared-ZDC/markel/issues/15)--2024-06-04
 - [交叉编译Openblas库](https://github.com/Jared-ZDC/markel/issues/14)--2024-06-03
-## 读书笔记
 - [AI 全栈工程师实现路径](https://github.com/Jared-ZDC/markel/issues/43)--2024-12-09
 - [什么是卷积](https://github.com/Jared-ZDC/markel/issues/35)--2024-09-03
 - [《华为高绩效管理PBC：上下同欲/力出一孔》](https://github.com/Jared-ZDC/markel/issues/31)--2024-08-20
