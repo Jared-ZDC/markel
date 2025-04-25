@@ -20,11 +20,11 @@
 * 交流邮箱: markel_zhu@126.com
 
 ## 最近更新
+- [iperf2 交叉编译 ARM64 static版本](https://github.com/Jared-ZDC/markel/issues/52)--2025-04-25
 - [Linux perf工具静态编译](https://github.com/Jared-ZDC/markel/issues/51)--2025-04-25
 - [协鑫科技 --- 二次失利总结](https://github.com/Jared-ZDC/markel/issues/50)--2025-04-07
 - [2025 预算及消费](https://github.com/Jared-ZDC/markel/issues/49)--2025-03-10
 - [2025年的计划](https://github.com/Jared-ZDC/markel/issues/48)--2024-12-29
-- [backtrader 简单双均线策略](https://github.com/Jared-ZDC/markel/issues/47)--2024-12-20
 ## python 机器学习
 - [python In 机器学习(一)](https://github.com/Jared-ZDC/markel/issues/24)--2024-08-03
 - [周总结及计划（20240902）](https://github.com/Jared-ZDC/markel/issues/34)--2024-09-02
@@ -51,11 +51,16 @@
 - [聊一聊职业机会](https://github.com/Jared-ZDC/markel/issues/16)--2024-06-04
 </details>
 
+- [iperf2 交叉编译 ARM64 static版本](https://github.com/Jared-ZDC/markel/issues/52)--2025-04-25
 - [Linux perf工具静态编译](https://github.com/Jared-ZDC/markel/issues/51)--2025-04-25
 - [backtrader 简单双均线策略](https://github.com/Jared-ZDC/markel/issues/47)--2024-12-20
 - [backtrader （一）](https://github.com/Jared-ZDC/markel/issues/46)--2024-12-19
 - [Qemu Virt平台集成ARM PL080 DMA](https://github.com/Jared-ZDC/markel/issues/15)--2024-06-04
+<details><summary>显示更多</summary>
+
 - [交叉编译Openblas库](https://github.com/Jared-ZDC/markel/issues/14)--2024-06-03
+</details>
+
 - [AI 全栈工程师实现路径](https://github.com/Jared-ZDC/markel/issues/43)--2024-12-09
 - [什么是卷积](https://github.com/Jared-ZDC/markel/issues/35)--2024-09-03
 - [《华为高绩效管理PBC：上下同欲/力出一孔》](https://github.com/Jared-ZDC/markel/issues/31)--2024-08-20
