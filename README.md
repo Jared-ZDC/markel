@@ -20,11 +20,11 @@
 * 交流邮箱: markel_zhu@126.com
 
 ## 最近更新
+- [投资企业的几种类型 --- 牢记于心](https://github.com/Jared-ZDC/markel/issues/54)--2025-04-26
 - [使用 QEMU 启动 ARM aarch64 架构 Ubuntu 虚拟机](https://github.com/Jared-ZDC/markel/issues/53)--2025-04-26
 - [iperf2 交叉编译 ARM64 static版本](https://github.com/Jared-ZDC/markel/issues/52)--2025-04-25
 - [Linux perf工具静态编译](https://github.com/Jared-ZDC/markel/issues/51)--2025-04-25
 - [协鑫科技 --- 二次失利总结](https://github.com/Jared-ZDC/markel/issues/50)--2025-04-07
-- [2025 预算及消费](https://github.com/Jared-ZDC/markel/issues/49)--2025-03-10
 ## python 机器学习
 - [python In 机器学习(一)](https://github.com/Jared-ZDC/markel/issues/24)--2024-08-03
 - [周总结及计划（20240902）](https://github.com/Jared-ZDC/markel/issues/34)--2024-09-02
@@ -36,6 +36,7 @@
 - [AI 学习架构梳理](https://github.com/Jared-ZDC/markel/issues/36)--2024-09-12
 - [linux dma一致性分析](https://github.com/Jared-ZDC/markel/issues/32)--2024-08-27
 - [关于原型验证的思考](https://github.com/Jared-ZDC/markel/issues/25)--2024-08-05
+- [投资企业的几种类型 --- 牢记于心](https://github.com/Jared-ZDC/markel/issues/54)--2025-04-26
 - [协鑫科技 --- 二次失利总结](https://github.com/Jared-ZDC/markel/issues/50)--2025-04-07
 - [美股大跌，A股是跑路还是加仓？](https://github.com/Jared-ZDC/markel/issues/26)--2024-08-05
 - [自洽](https://github.com/Jared-ZDC/markel/issues/45)--2024-12-10
