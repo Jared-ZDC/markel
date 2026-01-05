@@ -49,9 +49,10 @@ jobs:
           # 修复：使用 echo -n 确保无换行符 + 直接传递给 python
           token=$(echo -n "${{ secrets.G_T }}")
           source venv/bin/activate
-          python main.py "$token" ${{ github.repository }} --issue_number '${{ github.event.issue.number }}'
           echo "Token length: $(echo -n ${{ secrets.G_T }} | wc -c)"
           echo "Token (first 5 chars): $(echo -n ${{ secrets.G_T }} | head -c 5)"
+          python main.py "$token" ${{ github.repository }} --issue_number '${{ github.event.issue.number }}'
+          
           #echo "G_T=$(echo ${{ secrets.G_T }} | tr -d '\n')" >> $GITHUB_ENV
           #echo "Token: ${{ secrets.G_T }}"  # 仅用于调试，完成后删除
           #source venv/bin/activate
