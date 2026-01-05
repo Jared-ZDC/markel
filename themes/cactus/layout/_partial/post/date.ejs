@@ -2,7 +2,7 @@
     <div class="<%= class_name %>">
       <% if (is_post()) { %>
         <time datetime="<%= date_xml(post.date) %>" class="dt-published" itemprop="datePublished"><%= date(post.date, config.date_format) %></time>
-        <% if (theme.post.show_updated && post.date !== post.updated) { %>
+        <% if (!theme.post.show_updated && post.date !== post.updated) { %>
         (Updated: <time datetime="<%= date_xml(post.updated) %>" class="dt-updated" itemprop="dateModified"><%= date(post.updated, config.date_format) %></time>)
         <% } %>
       <% } else { %>

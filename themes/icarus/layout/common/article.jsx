@@ -30,8 +30,8 @@ module.exports = class extends Component {
         const language = toMomentLocale(page.lang || page.language || defaultLanguage || 'en');
         const cover = page.cover ? url_for(page.cover) : null;
         const updateTime = article && article.update_time !== undefined ? article.update_time : true;
-        //const isUpdated = page.updated && !moment(page.date).isSame(moment(page.updated));
-        const isUpdated = false; //page.updated && !moment(page.date).isSame(moment(page.updated));
+        const isUpdated = page.updated && !moment(page.date).isSame(moment(page.updated));
+        //const isUpdated = false; //page.updated && !moment(page.date).isSame(moment(page.updated));
         const shouldShowUpdated = page.updated && ((updateTime === 'auto' && isUpdated) || updateTime === true);
 
         return <Fragment>
