@@ -32,7 +32,7 @@ module.exports = class extends Component {
         const updateTime = article && article.update_time !== undefined ? article.update_time : true;
         const isUpdated = page.updated && !moment(page.date).isSame(moment(page.updated));
         //const isUpdated = false; //page.updated && !moment(page.date).isSame(moment(page.updated));
-        const shouldShowUpdated = false; //page.updated && ((updateTime === 'auto' && isUpdated) || updateTime === true);
+        const shouldShowUpdated = page.updated && ((updateTime !== 'auto' && isUpdated) && updateTime !== true);
 
         return <Fragment>
             {/* Main content */}
