@@ -19,7 +19,6 @@ post:
   title: "文章标题"
   author: "本文作者"
   created_at: "发布时间"
-  updated_at: "最后更新"
   word_count: "字数"
   url: "原始链接"
   views: "阅读"

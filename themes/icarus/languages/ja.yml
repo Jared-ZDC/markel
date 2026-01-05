@@ -27,7 +27,6 @@ widget:
     followit: 'follow.it'
 article:
     created_at: '%sに投稿'
-    updated_at: '%sに更新'
     more: '続きを読む'
     comments: 'コメント'
     read_time: '%sで読む'

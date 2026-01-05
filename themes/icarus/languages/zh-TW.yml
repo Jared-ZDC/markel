@@ -27,7 +27,6 @@ widget:
     followit: 'follow.it'
 article:
     created_at: '%s發表'
-    updated_at: '%s更新'
     more: '繼續閱讀'
     comments: '評論'
     read_time: '%s讀完'
@@ -37,7 +36,6 @@ article:
     licensing:
         author: '作者'
         created_at: '發表於'
-        updated_at: '更新於'
         licensed_under: '許可協議'
 donate:
     title: '喜歡這篇文章嗎? 贊助一下作者吧!'

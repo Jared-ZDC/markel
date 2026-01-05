@@ -27,7 +27,6 @@ widget:
     followit: 'follow.it'
 article:
     created_at: '%s发表'
-    updated_at: '%s更新'
     more: '阅读更多'
     comments: '评论'
     read_time: '%s读完'
@@ -37,7 +36,6 @@ article:
     licensing:
         author: '作者'
         created_at: '发布于'
-        updated_at: '更新于'
         licensed_under: '许可协议'
 donate:
     title: '喜欢这篇文章？打赏一下作者吧'
