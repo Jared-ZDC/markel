@@ -20,7 +20,7 @@
 * 交流邮箱: markel_zhu@126.com
 
 ## 最近更新
-- [25年度总结及26年规划](https://github.com/Jared-ZDC/markel/issues/55)--2026-01-04
+- [25年度总结](https://github.com/Jared-ZDC/markel/issues/55)--2026-01-04
 - [投资企业的几种类型 --- 牢记于心](https://github.com/Jared-ZDC/markel/issues/54)--2025-04-26
 - [使用 QEMU 启动 ARM aarch64 架构 Ubuntu 虚拟机](https://github.com/Jared-ZDC/markel/issues/53)--2025-04-26
 - [iperf2 交叉编译 ARM64 static版本](https://github.com/Jared-ZDC/markel/issues/52)--2025-04-25
@@ -31,7 +31,7 @@
 - [周总结及计划（20240826）](https://github.com/Jared-ZDC/markel/issues/33)--2024-08-27
 - [周总结及计划（20240819-20240825）](https://github.com/Jared-ZDC/markel/issues/30)--2024-08-19
 - [生活的懈怠之本周计划(20240812)](https://github.com/Jared-ZDC/markel/issues/29)--2024-08-12
-- [25年度总结及26年规划](https://github.com/Jared-ZDC/markel/issues/55)--2026-01-04
+- [25年度总结](https://github.com/Jared-ZDC/markel/issues/55)--2026-01-04
 - [2025 预算及消费](https://github.com/Jared-ZDC/markel/issues/49)--2025-03-10
 - [2025年的计划](https://github.com/Jared-ZDC/markel/issues/48)--2024-12-29
 - [AI 学习架构梳理](https://github.com/Jared-ZDC/markel/issues/36)--2024-09-12
