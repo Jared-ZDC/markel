@@ -20,11 +20,11 @@
 * 交流邮箱: markel_zhu@126.com
 
 ## 最近更新
+- [恋爱婚前必须要了解的一些问题](https://github.com/Jared-ZDC/markel/issues/58)--2026-01-22
 - [她](https://github.com/Jared-ZDC/markel/issues/57)--2026-01-20
 - [2026年度计划](https://github.com/Jared-ZDC/markel/issues/56)--2026-01-19
 - [25年度总结](https://github.com/Jared-ZDC/markel/issues/55)--2026-01-04
 - [投资企业的几种类型 --- 牢记于心](https://github.com/Jared-ZDC/markel/issues/54)--2025-04-26
-- [使用 QEMU 启动 ARM aarch64 架构 Ubuntu 虚拟机](https://github.com/Jared-ZDC/markel/issues/53)--2025-04-26
 ## python 机器学习
 - [python In 机器学习(一)](https://github.com/Jared-ZDC/markel/issues/24)--2024-08-03
 - [周总结及计划（20240902）](https://github.com/Jared-ZDC/markel/issues/34)--2024-09-02
@@ -41,13 +41,14 @@
 - [投资企业的几种类型 --- 牢记于心](https://github.com/Jared-ZDC/markel/issues/54)--2025-04-26
 - [协鑫科技 --- 二次失利总结](https://github.com/Jared-ZDC/markel/issues/50)--2025-04-07
 - [美股大跌，A股是跑路还是加仓？](https://github.com/Jared-ZDC/markel/issues/26)--2024-08-05
+- [恋爱婚前必须要了解的一些问题](https://github.com/Jared-ZDC/markel/issues/58)--2026-01-22
 - [她](https://github.com/Jared-ZDC/markel/issues/57)--2026-01-20
 - [自洽](https://github.com/Jared-ZDC/markel/issues/45)--2024-12-10
 - [成年人的世界，有些人注定只能陪你一阵子](https://github.com/Jared-ZDC/markel/issues/44)--2024-12-09
 - [近期乱想](https://github.com/Jared-ZDC/markel/issues/42)--2024-11-18
-- [国庆小思](https://github.com/Jared-ZDC/markel/issues/40)--2024-10-07
 <details><summary>显示更多</summary>
 
+- [国庆小思](https://github.com/Jared-ZDC/markel/issues/40)--2024-10-07
 - [近期思考（20240918）](https://github.com/Jared-ZDC/markel/issues/38)--2024-09-18
 - [始于颜值，忠于人品，陷于才华](https://github.com/Jared-ZDC/markel/issues/37)--2024-09-12
 - [高级别同学的汰换沟通策略梳理](https://github.com/Jared-ZDC/markel/issues/28)--2024-08-12
