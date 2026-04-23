@@ -20,11 +20,11 @@
 * 交流邮箱: markel_zhu@126.com
 
 ## 最近更新
+- [交易笔记](https://github.com/Jared-ZDC/markel/issues/59)--2026-04-23
 - [恋爱婚前必须要了解的一些问题](https://github.com/Jared-ZDC/markel/issues/58)--2026-01-22
 - [她](https://github.com/Jared-ZDC/markel/issues/57)--2026-01-20
 - [2026年度计划](https://github.com/Jared-ZDC/markel/issues/56)--2026-01-19
 - [25年度总结](https://github.com/Jared-ZDC/markel/issues/55)--2026-01-04
-- [投资企业的几种类型 --- 牢记于心](https://github.com/Jared-ZDC/markel/issues/54)--2025-04-26
 ## python 机器学习
 - [python In 机器学习(一)](https://github.com/Jared-ZDC/markel/issues/24)--2024-08-03
 - [周总结及计划（20240902）](https://github.com/Jared-ZDC/markel/issues/34)--2024-09-02
@@ -38,6 +38,7 @@
 - [AI 学习架构梳理](https://github.com/Jared-ZDC/markel/issues/36)--2024-09-12
 - [linux dma一致性分析](https://github.com/Jared-ZDC/markel/issues/32)--2024-08-27
 - [关于原型验证的思考](https://github.com/Jared-ZDC/markel/issues/25)--2024-08-05
+- [交易笔记](https://github.com/Jared-ZDC/markel/issues/59)--2026-04-23
 - [投资企业的几种类型 --- 牢记于心](https://github.com/Jared-ZDC/markel/issues/54)--2025-04-26
 - [协鑫科技 --- 二次失利总结](https://github.com/Jared-ZDC/markel/issues/50)--2025-04-07
 - [美股大跌，A股是跑路还是加仓？](https://github.com/Jared-ZDC/markel/issues/26)--2024-08-05
